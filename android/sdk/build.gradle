@@ -1,0 +1,44 @@
+apply plugin: 'com.android.library'
+apply plugin: 'me.tatarka.retrolambda'
+
+//version  已在libraryBaseGradle里自动获取tag进行设定
+description = 'showjoy shop viewgroup'
+ext.pom_packaging = 'aar'
+ext.pom_groupId = 'com.showjoy.android'
+ext.pom_artifactId = 'weex'
+ext.pom_name = 'shopandroid_weex_base'
+ext.pom_snapshot = false
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+
+    compile 'com.taobao.android:weex_sdk:0.11.0'
+
+//    compile 'com.taobao.android:weex_inspector:0.0.8.5'
+//    compile 'com.google.code.findbugs:jsr305:2.0.1'
+
+    compile 'com.android.support:support-v4:24.0.0'
+    compile 'com.android.support:appcompat-v7:24.0.0'
+    compile 'com.android.support:recyclerview-v7:24.0.0'
+
+    compile 'com.squareup.okhttp:okhttp:2.3.0'
+    compile 'com.squareup.okhttp:okhttp-ws:2.3.0'
+
+    compile 'com.alibaba:fastjson:1.1.56.android'
+
+    compile 'com.showjoy.android:image:1.0.4'
+    compile 'com.showjoy.android:storage:2.0.0'
+
+
+    compile 'com.showjoy.android:rxbus:1.0.0'
+
+}
+android {
+    useLibrary 'org.apache.http.legacy'
+    //指定java8
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+apply from: System.properties['libraryBaseGradle']
