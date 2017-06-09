@@ -1,0 +1,753 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		BC02B6F71EE7DF4900BECDBD /* SHWXNetworkDefaultlmpl.m in Sources */ = {isa = PBXBuildFile; fileRef = BC02B6F61EE7DF4900BECDBD /* SHWXNetworkDefaultlmpl.m */; };
+		BC02B6FA1EE7E0D200BECDBD /* SHWXImgLoaderDefaultImpl.m in Sources */ = {isa = PBXBuildFile; fileRef = BC02B6F91EE7E0D200BECDBD /* SHWXImgLoaderDefaultImpl.m */; };
+		BC02B6FD1EE7E0F300BECDBD /* SHWXImgLoaderDefaultImplProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = BC02B6FC1EE7E0F300BECDBD /* SHWXImgLoaderDefaultImplProtocol.m */; };
+		BC02B7001EE7E55600BECDBD /* SHWXManagement.m in Sources */ = {isa = PBXBuildFile; fileRef = BC02B6FF1EE7E55600BECDBD /* SHWXManagement.m */; };
+		BC02B70D1EE7FF4200BECDBD /* SHSaveData.m in Sources */ = {isa = PBXBuildFile; fileRef = BC02B70C1EE7FF4200BECDBD /* SHSaveData.m */; };
+		BC02B7101EE8039300BECDBD /* SHUniversalTool.m in Sources */ = {isa = PBXBuildFile; fileRef = BC02B70F1EE8039300BECDBD /* SHUniversalTool.m */; };
+		BC02B7141EE8060900BECDBD /* SHFileProcessing.m in Sources */ = {isa = PBXBuildFile; fileRef = BC02B7131EE8060900BECDBD /* SHFileProcessing.m */; };
+		BC3BB4F31EE6B8D900DDDA36 /* SHWXAComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = BC3BB4F21EE6B8D900DDDA36 /* SHWXAComponent.m */; };
+		BC7E0D561EE6A5C90024733B /* SHWXBaseModule.m in Sources */ = {isa = PBXBuildFile; fileRef = BC7E0D551EE6A5C90024733B /* SHWXBaseModule.m */; };
+		BCBB542E1EE94527004B0835 /* SHWXPageModel.m in Sources */ = {isa = PBXBuildFile; fileRef = BCBB542D1EE94527004B0835 /* SHWXPageModel.m */; };
+		BCC7A5041EEA4D8200BAA8D9 /* SHWXView.m in Sources */ = {isa = PBXBuildFile; fileRef = BCC7A5031EEA4D8200BAA8D9 /* SHWXView.m */; };
+		BCF02FD31EE52A120027C0B9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BCF02FD21EE52A120027C0B9 /* main.m */; };
+		BCF02FD61EE52A120027C0B9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BCF02FD51EE52A120027C0B9 /* AppDelegate.m */; };
+		BCF02FD91EE52A120027C0B9 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BCF02FD81EE52A120027C0B9 /* ViewController.m */; };
+		BCF02FDC1EE52A120027C0B9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BCF02FDA1EE52A120027C0B9 /* Main.storyboard */; };
+		BCF02FDE1EE52A120027C0B9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BCF02FDD1EE52A120027C0B9 /* Assets.xcassets */; };
+		BCF02FE11EE52A120027C0B9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BCF02FDF1EE52A120027C0B9 /* LaunchScreen.storyboard */; };
+		BCF02FEC1EE52A120027C0B9 /* SHWeexSDKTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BCF02FEB1EE52A120027C0B9 /* SHWeexSDKTests.m */; };
+		BCF02FF71EE52A120027C0B9 /* SHWeexSDKUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = BCF02FF61EE52A120027C0B9 /* SHWeexSDKUITests.m */; };
+		C4518CBC5F1475A83E2502E9 /* libPods-SHWeexSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4769D3E5B8F945A458B64EB8 /* libPods-SHWeexSDK.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		BCF02FE81EE52A120027C0B9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BCF02FC61EE52A120027C0B9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BCF02FCD1EE52A120027C0B9;
+			remoteInfo = SHWeexSDK;
+		};
+		BCF02FF31EE52A120027C0B9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BCF02FC61EE52A120027C0B9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BCF02FCD1EE52A120027C0B9;
+			remoteInfo = SHWeexSDK;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		2A98324DBB4DC2965D5A48E8 /* Pods-SHWeexSDK.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SHWeexSDK.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SHWeexSDK/Pods-SHWeexSDK.debug.xcconfig"; sourceTree = "<group>"; };
+		4769D3E5B8F945A458B64EB8 /* libPods-SHWeexSDK.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SHWeexSDK.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		90CF8A076847B32401BA44C5 /* Pods-SHWeexSDK.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SHWeexSDK.release.xcconfig"; path = "Pods/Target Support Files/Pods-SHWeexSDK/Pods-SHWeexSDK.release.xcconfig"; sourceTree = "<group>"; };
+		BC02B6F51EE7DF4900BECDBD /* SHWXNetworkDefaultlmpl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHWXNetworkDefaultlmpl.h; sourceTree = "<group>"; };
+		BC02B6F61EE7DF4900BECDBD /* SHWXNetworkDefaultlmpl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHWXNetworkDefaultlmpl.m; sourceTree = "<group>"; };
+		BC02B6F81EE7E0D200BECDBD /* SHWXImgLoaderDefaultImpl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHWXImgLoaderDefaultImpl.h; sourceTree = "<group>"; };
+		BC02B6F91EE7E0D200BECDBD /* SHWXImgLoaderDefaultImpl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHWXImgLoaderDefaultImpl.m; sourceTree = "<group>"; };
+		BC02B6FB1EE7E0F300BECDBD /* SHWXImgLoaderDefaultImplProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHWXImgLoaderDefaultImplProtocol.h; sourceTree = "<group>"; };
+		BC02B6FC1EE7E0F300BECDBD /* SHWXImgLoaderDefaultImplProtocol.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHWXImgLoaderDefaultImplProtocol.m; sourceTree = "<group>"; };
+		BC02B6FE1EE7E55600BECDBD /* SHWXManagement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHWXManagement.h; sourceTree = "<group>"; };
+		BC02B6FF1EE7E55600BECDBD /* SHWXManagement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHWXManagement.m; sourceTree = "<group>"; };
+		BC02B70B1EE7FF4200BECDBD /* SHSaveData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHSaveData.h; sourceTree = "<group>"; };
+		BC02B70C1EE7FF4200BECDBD /* SHSaveData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHSaveData.m; sourceTree = "<group>"; };
+		BC02B70E1EE8039300BECDBD /* SHUniversalTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHUniversalTool.h; sourceTree = "<group>"; };
+		BC02B70F1EE8039300BECDBD /* SHUniversalTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHUniversalTool.m; sourceTree = "<group>"; };
+		BC02B7121EE8060900BECDBD /* SHFileProcessing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHFileProcessing.h; sourceTree = "<group>"; };
+		BC02B7131EE8060900BECDBD /* SHFileProcessing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHFileProcessing.m; sourceTree = "<group>"; };
+		BC3BB4F11EE6B8D900DDDA36 /* SHWXAComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHWXAComponent.h; sourceTree = "<group>"; };
+		BC3BB4F21EE6B8D900DDDA36 /* SHWXAComponent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHWXAComponent.m; sourceTree = "<group>"; };
+		BC7E0D541EE6A5C90024733B /* SHWXBaseModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHWXBaseModule.h; sourceTree = "<group>"; };
+		BC7E0D551EE6A5C90024733B /* SHWXBaseModule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHWXBaseModule.m; sourceTree = "<group>"; };
+		BCBB542C1EE94527004B0835 /* SHWXPageModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHWXPageModel.h; sourceTree = "<group>"; };
+		BCBB542D1EE94527004B0835 /* SHWXPageModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHWXPageModel.m; sourceTree = "<group>"; };
+		BCC7A5021EEA4D8200BAA8D9 /* SHWXView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHWXView.h; sourceTree = "<group>"; };
+		BCC7A5031EEA4D8200BAA8D9 /* SHWXView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHWXView.m; sourceTree = "<group>"; };
+		BCC7A5051EEA792C00BAA8D9 /* SHWXConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SHWXConfig.h; sourceTree = "<group>"; };
+		BCF02FCE1EE52A120027C0B9 /* SHWeexSDK.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SHWeexSDK.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BCF02FD21EE52A120027C0B9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		BCF02FD41EE52A120027C0B9 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		BCF02FD51EE52A120027C0B9 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		BCF02FD71EE52A120027C0B9 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		BCF02FD81EE52A120027C0B9 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		BCF02FDB1EE52A120027C0B9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		BCF02FDD1EE52A120027C0B9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		BCF02FE01EE52A120027C0B9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		BCF02FE21EE52A120027C0B9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BCF02FE71EE52A120027C0B9 /* SHWeexSDKTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SHWeexSDKTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BCF02FEB1EE52A120027C0B9 /* SHWeexSDKTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SHWeexSDKTests.m; sourceTree = "<group>"; };
+		BCF02FED1EE52A120027C0B9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BCF02FF21EE52A120027C0B9 /* SHWeexSDKUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SHWeexSDKUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BCF02FF61EE52A120027C0B9 /* SHWeexSDKUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SHWeexSDKUITests.m; sourceTree = "<group>"; };
+		BCF02FF81EE52A120027C0B9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BCF02FCB1EE52A120027C0B9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C4518CBC5F1475A83E2502E9 /* libPods-SHWeexSDK.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BCF02FE41EE52A120027C0B9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BCF02FEF1EE52A120027C0B9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2431E2DB4990DD7737EAE629 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4769D3E5B8F945A458B64EB8 /* libPods-SHWeexSDK.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		900B6550879F227FC8DFCDCB /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2A98324DBB4DC2965D5A48E8 /* Pods-SHWeexSDK.debug.xcconfig */,
+				90CF8A076847B32401BA44C5 /* Pods-SHWeexSDK.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		BC02B7011EE7FA6400BECDBD /* common */ = {
+			isa = PBXGroup;
+			children = (
+				BC02B70E1EE8039300BECDBD /* SHUniversalTool.h */,
+				BC02B70F1EE8039300BECDBD /* SHUniversalTool.m */,
+				BC02B7111EE805F300BECDBD /* FileProcessing */,
+				BC02B70A1EE7FF4200BECDBD /* SaveData */,
+			);
+			path = common;
+			sourceTree = "<group>";
+		};
+		BC02B70A1EE7FF4200BECDBD /* SaveData */ = {
+			isa = PBXGroup;
+			children = (
+				BC02B70B1EE7FF4200BECDBD /* SHSaveData.h */,
+				BC02B70C1EE7FF4200BECDBD /* SHSaveData.m */,
+			);
+			path = SaveData;
+			sourceTree = "<group>";
+		};
+		BC02B7111EE805F300BECDBD /* FileProcessing */ = {
+			isa = PBXGroup;
+			children = (
+				BC02B7121EE8060900BECDBD /* SHFileProcessing.h */,
+				BC02B7131EE8060900BECDBD /* SHFileProcessing.m */,
+			);
+			path = FileProcessing;
+			sourceTree = "<group>";
+		};
+		BC7E0D501EE6A3520024733B /* extends */ = {
+			isa = PBXGroup;
+			children = (
+				BC7E0D511EE6A3520024733B /* component */,
+				BC7E0D521EE6A3520024733B /* module */,
+				BC7E0D531EE6A3520024733B /* protocol */,
+			);
+			path = extends;
+			sourceTree = "<group>";
+		};
+		BC7E0D511EE6A3520024733B /* component */ = {
+			isa = PBXGroup;
+			children = (
+				BC3BB4F11EE6B8D900DDDA36 /* SHWXAComponent.h */,
+				BC3BB4F21EE6B8D900DDDA36 /* SHWXAComponent.m */,
+			);
+			path = component;
+			sourceTree = "<group>";
+		};
+		BC7E0D521EE6A3520024733B /* module */ = {
+			isa = PBXGroup;
+			children = (
+				BC7E0D541EE6A5C90024733B /* SHWXBaseModule.h */,
+				BC7E0D551EE6A5C90024733B /* SHWXBaseModule.m */,
+			);
+			path = module;
+			sourceTree = "<group>";
+		};
+		BC7E0D531EE6A3520024733B /* protocol */ = {
+			isa = PBXGroup;
+			children = (
+				BC02B6F51EE7DF4900BECDBD /* SHWXNetworkDefaultlmpl.h */,
+				BC02B6F61EE7DF4900BECDBD /* SHWXNetworkDefaultlmpl.m */,
+				BC02B6F81EE7E0D200BECDBD /* SHWXImgLoaderDefaultImpl.h */,
+				BC02B6F91EE7E0D200BECDBD /* SHWXImgLoaderDefaultImpl.m */,
+				BC02B6FB1EE7E0F300BECDBD /* SHWXImgLoaderDefaultImplProtocol.h */,
+				BC02B6FC1EE7E0F300BECDBD /* SHWXImgLoaderDefaultImplProtocol.m */,
+			);
+			path = protocol;
+			sourceTree = "<group>";
+		};
+		BCF02FC51EE52A120027C0B9 = {
+			isa = PBXGroup;
+			children = (
+				BCF02FD01EE52A120027C0B9 /* SHWeexSDK */,
+				BCF02FEA1EE52A120027C0B9 /* SHWeexSDKTests */,
+				BCF02FF51EE52A120027C0B9 /* SHWeexSDKUITests */,
+				BCF02FCF1EE52A120027C0B9 /* Products */,
+				900B6550879F227FC8DFCDCB /* Pods */,
+				2431E2DB4990DD7737EAE629 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		BCF02FCF1EE52A120027C0B9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BCF02FCE1EE52A120027C0B9 /* SHWeexSDK.app */,
+				BCF02FE71EE52A120027C0B9 /* SHWeexSDKTests.xctest */,
+				BCF02FF21EE52A120027C0B9 /* SHWeexSDKUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BCF02FD01EE52A120027C0B9 /* SHWeexSDK */ = {
+			isa = PBXGroup;
+			children = (
+				BCF030041EE52C0C0027C0B9 /* SHWeexSDK */,
+				BCF02FD41EE52A120027C0B9 /* AppDelegate.h */,
+				BCF02FD51EE52A120027C0B9 /* AppDelegate.m */,
+				BCF02FD71EE52A120027C0B9 /* ViewController.h */,
+				BCF02FD81EE52A120027C0B9 /* ViewController.m */,
+				BCF02FDA1EE52A120027C0B9 /* Main.storyboard */,
+				BCF02FDD1EE52A120027C0B9 /* Assets.xcassets */,
+				BCF02FDF1EE52A120027C0B9 /* LaunchScreen.storyboard */,
+				BCF02FE21EE52A120027C0B9 /* Info.plist */,
+				BCF02FD11EE52A120027C0B9 /* Supporting Files */,
+			);
+			path = SHWeexSDK;
+			sourceTree = "<group>";
+		};
+		BCF02FD11EE52A120027C0B9 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				BCF02FD21EE52A120027C0B9 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		BCF02FEA1EE52A120027C0B9 /* SHWeexSDKTests */ = {
+			isa = PBXGroup;
+			children = (
+				BCF02FEB1EE52A120027C0B9 /* SHWeexSDKTests.m */,
+				BCF02FED1EE52A120027C0B9 /* Info.plist */,
+			);
+			path = SHWeexSDKTests;
+			sourceTree = "<group>";
+		};
+		BCF02FF51EE52A120027C0B9 /* SHWeexSDKUITests */ = {
+			isa = PBXGroup;
+			children = (
+				BCF02FF61EE52A120027C0B9 /* SHWeexSDKUITests.m */,
+				BCF02FF81EE52A120027C0B9 /* Info.plist */,
+			);
+			path = SHWeexSDKUITests;
+			sourceTree = "<group>";
+		};
+		BCF030041EE52C0C0027C0B9 /* SHWeexSDK */ = {
+			isa = PBXGroup;
+			children = (
+				BC02B7011EE7FA6400BECDBD /* common */,
+				BC7E0D501EE6A3520024733B /* extends */,
+				BC02B6FE1EE7E55600BECDBD /* SHWXManagement.h */,
+				BC02B6FF1EE7E55600BECDBD /* SHWXManagement.m */,
+				BCBB542C1EE94527004B0835 /* SHWXPageModel.h */,
+				BCBB542D1EE94527004B0835 /* SHWXPageModel.m */,
+				BCC7A5021EEA4D8200BAA8D9 /* SHWXView.h */,
+				BCC7A5031EEA4D8200BAA8D9 /* SHWXView.m */,
+				BCC7A5051EEA792C00BAA8D9 /* SHWXConfig.h */,
+			);
+			path = SHWeexSDK;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		BCF02FCD1EE52A120027C0B9 /* SHWeexSDK */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BCF02FFB1EE52A120027C0B9 /* Build configuration list for PBXNativeTarget "SHWeexSDK" */;
+			buildPhases = (
+				B3BB8BF8863FD1B14047F7D8 /* [CP] Check Pods Manifest.lock */,
+				BCF02FCA1EE52A120027C0B9 /* Sources */,
+				BCF02FCB1EE52A120027C0B9 /* Frameworks */,
+				BCF02FCC1EE52A120027C0B9 /* Resources */,
+				D66D1D1C1A12F4040DC0EABD /* [CP] Embed Pods Frameworks */,
+				D1B9B15F8C70DE30CC0B631D /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SHWeexSDK;
+			productName = SHWeexSDK;
+			productReference = BCF02FCE1EE52A120027C0B9 /* SHWeexSDK.app */;
+			productType = "com.apple.product-type.application";
+		};
+		BCF02FE61EE52A120027C0B9 /* SHWeexSDKTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BCF02FFE1EE52A120027C0B9 /* Build configuration list for PBXNativeTarget "SHWeexSDKTests" */;
+			buildPhases = (
+				BCF02FE31EE52A120027C0B9 /* Sources */,
+				BCF02FE41EE52A120027C0B9 /* Frameworks */,
+				BCF02FE51EE52A120027C0B9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BCF02FE91EE52A120027C0B9 /* PBXTargetDependency */,
+			);
+			name = SHWeexSDKTests;
+			productName = SHWeexSDKTests;
+			productReference = BCF02FE71EE52A120027C0B9 /* SHWeexSDKTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		BCF02FF11EE52A120027C0B9 /* SHWeexSDKUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BCF030011EE52A120027C0B9 /* Build configuration list for PBXNativeTarget "SHWeexSDKUITests" */;
+			buildPhases = (
+				BCF02FEE1EE52A120027C0B9 /* Sources */,
+				BCF02FEF1EE52A120027C0B9 /* Frameworks */,
+				BCF02FF01EE52A120027C0B9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BCF02FF41EE52A120027C0B9 /* PBXTargetDependency */,
+			);
+			name = SHWeexSDKUITests;
+			productName = SHWeexSDKUITests;
+			productReference = BCF02FF21EE52A120027C0B9 /* SHWeexSDKUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BCF02FC61EE52A120027C0B9 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = YunRuo;
+				TargetAttributes = {
+					BCF02FCD1EE52A120027C0B9 = {
+						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = TA37MW247M;
+						ProvisioningStyle = Automatic;
+					};
+					BCF02FE61EE52A120027C0B9 = {
+						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = TA37MW247M;
+						ProvisioningStyle = Automatic;
+						TestTargetID = BCF02FCD1EE52A120027C0B9;
+					};
+					BCF02FF11EE52A120027C0B9 = {
+						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = TA37MW247M;
+						ProvisioningStyle = Automatic;
+						TestTargetID = BCF02FCD1EE52A120027C0B9;
+					};
+				};
+			};
+			buildConfigurationList = BCF02FC91EE52A120027C0B9 /* Build configuration list for PBXProject "SHWeexSDK" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = BCF02FC51EE52A120027C0B9;
+			productRefGroup = BCF02FCF1EE52A120027C0B9 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BCF02FCD1EE52A120027C0B9 /* SHWeexSDK */,
+				BCF02FE61EE52A120027C0B9 /* SHWeexSDKTests */,
+				BCF02FF11EE52A120027C0B9 /* SHWeexSDKUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BCF02FCC1EE52A120027C0B9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BCF02FE11EE52A120027C0B9 /* LaunchScreen.storyboard in Resources */,
+				BCF02FDE1EE52A120027C0B9 /* Assets.xcassets in Resources */,
+				BCF02FDC1EE52A120027C0B9 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BCF02FE51EE52A120027C0B9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BCF02FF01EE52A120027C0B9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		B3BB8BF8863FD1B14047F7D8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		D1B9B15F8C70DE30CC0B631D /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SHWeexSDK/Pods-SHWeexSDK-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D66D1D1C1A12F4040DC0EABD /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SHWeexSDK/Pods-SHWeexSDK-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BCF02FCA1EE52A120027C0B9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BCF02FD91EE52A120027C0B9 /* ViewController.m in Sources */,
+				BCF02FD61EE52A120027C0B9 /* AppDelegate.m in Sources */,
+				BC02B7101EE8039300BECDBD /* SHUniversalTool.m in Sources */,
+				BC7E0D561EE6A5C90024733B /* SHWXBaseModule.m in Sources */,
+				BCF02FD31EE52A120027C0B9 /* main.m in Sources */,
+				BC02B6FD1EE7E0F300BECDBD /* SHWXImgLoaderDefaultImplProtocol.m in Sources */,
+				BC02B7141EE8060900BECDBD /* SHFileProcessing.m in Sources */,
+				BC3BB4F31EE6B8D900DDDA36 /* SHWXAComponent.m in Sources */,
+				BCBB542E1EE94527004B0835 /* SHWXPageModel.m in Sources */,
+				BC02B70D1EE7FF4200BECDBD /* SHSaveData.m in Sources */,
+				BC02B6FA1EE7E0D200BECDBD /* SHWXImgLoaderDefaultImpl.m in Sources */,
+				BC02B6F71EE7DF4900BECDBD /* SHWXNetworkDefaultlmpl.m in Sources */,
+				BCC7A5041EEA4D8200BAA8D9 /* SHWXView.m in Sources */,
+				BC02B7001EE7E55600BECDBD /* SHWXManagement.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BCF02FE31EE52A120027C0B9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BCF02FEC1EE52A120027C0B9 /* SHWeexSDKTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BCF02FEE1EE52A120027C0B9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BCF02FF71EE52A120027C0B9 /* SHWeexSDKUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		BCF02FE91EE52A120027C0B9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BCF02FCD1EE52A120027C0B9 /* SHWeexSDK */;
+			targetProxy = BCF02FE81EE52A120027C0B9 /* PBXContainerItemProxy */;
+		};
+		BCF02FF41EE52A120027C0B9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BCF02FCD1EE52A120027C0B9 /* SHWeexSDK */;
+			targetProxy = BCF02FF31EE52A120027C0B9 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		BCF02FDA1EE52A120027C0B9 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BCF02FDB1EE52A120027C0B9 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		BCF02FDF1EE52A120027C0B9 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BCF02FE01EE52A120027C0B9 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		BCF02FF91EE52A120027C0B9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		BCF02FFA1EE52A120027C0B9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		BCF02FFC1EE52A120027C0B9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2A98324DBB4DC2965D5A48E8 /* Pods-SHWeexSDK.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = TA37MW247M;
+				INFOPLIST_FILE = SHWeexSDK/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = YunRuo.SHWeexSDK;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		BCF02FFD1EE52A120027C0B9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 90CF8A076847B32401BA44C5 /* Pods-SHWeexSDK.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = TA37MW247M;
+				INFOPLIST_FILE = SHWeexSDK/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = YunRuo.SHWeexSDK;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		BCF02FFF1EE52A120027C0B9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = TA37MW247M;
+				INFOPLIST_FILE = SHWeexSDKTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = YunRuo.SHWeexSDKTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SHWeexSDK.app/SHWeexSDK";
+			};
+			name = Debug;
+		};
+		BCF030001EE52A120027C0B9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = TA37MW247M;
+				INFOPLIST_FILE = SHWeexSDKTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = YunRuo.SHWeexSDKTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SHWeexSDK.app/SHWeexSDK";
+			};
+			name = Release;
+		};
+		BCF030021EE52A120027C0B9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = TA37MW247M;
+				INFOPLIST_FILE = SHWeexSDKUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = YunRuo.SHWeexSDKUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = SHWeexSDK;
+			};
+			name = Debug;
+		};
+		BCF030031EE52A120027C0B9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = TA37MW247M;
+				INFOPLIST_FILE = SHWeexSDKUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = YunRuo.SHWeexSDKUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = SHWeexSDK;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BCF02FC91EE52A120027C0B9 /* Build configuration list for PBXProject "SHWeexSDK" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BCF02FF91EE52A120027C0B9 /* Debug */,
+				BCF02FFA1EE52A120027C0B9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BCF02FFB1EE52A120027C0B9 /* Build configuration list for PBXNativeTarget "SHWeexSDK" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BCF02FFC1EE52A120027C0B9 /* Debug */,
+				BCF02FFD1EE52A120027C0B9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BCF02FFE1EE52A120027C0B9 /* Build configuration list for PBXNativeTarget "SHWeexSDKTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BCF02FFF1EE52A120027C0B9 /* Debug */,
+				BCF030001EE52A120027C0B9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BCF030011EE52A120027C0B9 /* Build configuration list for PBXNativeTarget "SHWeexSDKUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BCF030021EE52A120027C0B9 /* Debug */,
+				BCF030031EE52A120027C0B9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BCF02FC61EE52A120027C0B9 /* Project object */;
+}

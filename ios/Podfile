@@ -1,0 +1,11 @@
+source 'https://github.com/CocoaPods/Specs.git'
+target "SHWeexSDK" do
+platform :ios, '7.0'
+
+pod 'WeexSDK', '~> 0.12.0'   #weexSDK
+pod 'WXDevtool', '~> 0.9.5'  #weex测试SDK
+pod 'PINRemoteImage/iOS', '~> 3.0.0-beta.8' #图片加载
+pod 'PINRemoteImage/PINCache' #图片缓存
+pod 'AFNetworking', '~> 3.1.0' #网络请求
+
+end
