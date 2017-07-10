@@ -7,7 +7,7 @@
 //
 
 #import "SHWXAComponent.h"
-
+#import "SHWeexManager.h"
 @interface SHWXAComponent()
 
 @property (nonatomic, strong) UITapGestureRecognizer *tap;
@@ -56,7 +56,28 @@
 - (void)openURL
 {
     if (_href && [_href length] > 0) {
-        
+        NSString * mstrUrl = _href;
+        if (mstrUrl.length) {
+            //绝对路径
+            if ([[[SHWeexManager shareManagement] weexService] isSupportHttps]==YES) {
+                mstrUrl = [mstrUrl stringByReplacingOccurrencesOfString:@"http://" withString:@"https://"];
+            }
+            //相对路径
+            if (![mstrUrl containsString:@"://"]) {
+                if ([[mstrUrl substringToIndex:1] isEqualToString:@"/"]) {
+                    mstrUrl = [mstrUrl substringFromIndex:1];
+                }
+                mstrUrl = [NSString stringWithFormat:@"%@%@",[[[SHWeexManager shareManagement] weexService] getDefaultHost],mstrUrl];
+            }
+            //协议跳转
+            if ([mstrUrl containsString:@"http://"] || [mstrUrl containsString:@"https://"]) {
+                [[[SHWeexManager shareManagement] weexService] openUrl:[self getCurrentViewController] url:mstrUrl force:NO];
+                return;
+            }
+            //其他跳转
+            [[UIApplication sharedApplication] openURL:[NSURL URLWithString:mstrUrl]];
+        }
+
     }
 }
 

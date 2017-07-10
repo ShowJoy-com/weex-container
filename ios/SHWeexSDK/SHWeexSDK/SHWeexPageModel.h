@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface SHWXPageModel : NSObject
+@interface SHWeexPageModel : NSObject
 
 @property (nonatomic,strong) NSString      *page; // 页面名称
 @property (nonatomic,strong) NSString      *url;  // weex连接

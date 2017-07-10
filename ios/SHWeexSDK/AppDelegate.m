@@ -7,7 +7,11 @@
 //
 
 #import "AppDelegate.h"
-
+#import "SHWeexManager.h"
+#import "ISHWeexService.h"
+#import "SHWeexConfig.h"
+#import "SHWXImgLoaderDefaultImpl.h"
+#import "ViewController.h"
 @interface AppDelegate ()
 
 @end
@@ -17,6 +21,13 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    ISHWeexService * WeexService = [[ISHWeexService alloc] init];
+    [[SHWeexManager shareManagement] init:application weexService:WeexService];
+    [WXSDKEngine registerHandler:[SHWXImgLoaderDefaultImpl new] withProtocol:@protocol(WXImgLoaderProtocol)];
+    ViewController * vc = [[ViewController alloc] init];
+    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:vc];
+    self.window.rootViewController=nav;
+    self.window.backgroundColor=[UIColor whiteColor];
     return YES;
 }
 

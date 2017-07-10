@@ -6,8 +6,8 @@
 //  Copyright © 2017年 YunRuo. All rights reserved.
 //
 
-#import "SHWXPageModel.h"
+#import "SHWeexPageModel.h"
 
-@implementation SHWXPageModel
+@implementation SHWeexPageModel
 
 @end

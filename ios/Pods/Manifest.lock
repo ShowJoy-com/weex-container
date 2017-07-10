@@ -29,6 +29,7 @@ PODS:
   - PINRemoteImage/PINCache (3.0.0-beta.10):
     - PINCache (= 3.0.1-beta.4)
     - PINRemoteImage/Core
+  - SHScanQrCode (0.0.2)
   - SocketRocket (0.5.1)
   - WeexSDK (0.12.0):
     - SocketRocket
@@ -39,6 +40,7 @@ DEPENDENCIES:
   - AFNetworking (~> 3.1.0)
   - PINRemoteImage/iOS (~> 3.0.0-beta.8)
   - PINRemoteImage/PINCache
+  - SHScanQrCode (~> 0.0.2)
   - WeexSDK (~> 0.12.0)
   - WXDevtool (~> 0.9.5)
 
@@ -47,10 +49,11 @@ SPEC CHECKSUMS:
   PINCache: a89c8f609232afac77128557bd12c861844423d7
   PINOperation: ac23db44796d4a564ecf9b5ea7163510f579b71d
   PINRemoteImage: 3782605733d65798ab3919e1019ce48e43171126
+  SHScanQrCode: eacee301ef46f13f7e1e41d420fa63dc51cff5d4
   SocketRocket: d57c7159b83c3c6655745cd15302aa24b6bae531
   WeexSDK: 8573b6e15195d4efc7c786ddc3be6f50d9ccb01c
   WXDevtool: 5135a5c6f4426fb635babb9eacfa14352bc66dc6
 
-PODFILE CHECKSUM: 8213a61d6e2f7532ccb3a57d5c9c218f17cff78d
+PODFILE CHECKSUM: cfb6d94b805384ba991162777061b70ece66dc1d
 
 COCOAPODS: 1.2.1

@@ -7,6 +7,7 @@
 //
 
 #import "SHWXBaseModule.h"
+#import "SHWeexManager.h"
 
 @implementation SHWXBaseModule
 
@@ -25,8 +26,31 @@ WX_EXPORT_METHOD(@selector(fireGlobalEvent: data: callback:))
  @param mstrUrl 链接地址
  */
 -(void)loadPage:(NSString *)mstrUrl{
-}
+    if (mstrUrl.length) {
+        //绝对路径
+        if ([mstrUrl containsString:@"http://"]) {
+            if ([[[SHWeexManager shareManagement] weexService] isSupportHttps]==YES) {
+                mstrUrl = [mstrUrl stringByReplacingOccurrencesOfString:@"http://" withString:@"https://"];
+            }
+            
+        }
+        //相对路径
+        if (![mstrUrl containsString:@"://"]) {
+            if ([[mstrUrl substringToIndex:1] isEqualToString:@"/"]) {
+                mstrUrl = [mstrUrl substringFromIndex:1];
+            }
+            mstrUrl = [NSString stringWithFormat:@"%@%@",[[[SHWeexManager shareManagement] weexService] getDefaultHost],mstrUrl];
+        }
+        //协议跳转
+        if ([mstrUrl containsString:@"http://"] || [mstrUrl containsString:@"https://"]) {
+            [[[SHWeexManager shareManagement] weexService] openUrl:[self getCurrentViewController] url:mstrUrl force:NO];
+            return;
+        }
+        //其他跳转
+        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:mstrUrl]];
+    }
 
+}
 /**
  关闭当前controller，返回到上一级页面
  @param strJson 可传值（暂无用）
@@ -62,20 +86,19 @@ WX_EXPORT_METHOD(@selector(fireGlobalEvent: data: callback:))
  @param text 自定义loading文案
  */
 -(void)showLoading:(NSString *)text{
-    
+    [[[SHWeexManager shareManagement] weexService] showLoading:text];
 }
 /**
  显示Loading 无文案
  */
 -(void)showLoading{
-    
-    
+    [[[SHWeexManager shareManagement] weexService] showLoading];
 }
 /**
  隐藏Loading
  */
 -(void)hideLoading{
-    
+    [[[SHWeexManager shareManagement] weexService] hideLoading];
 }
 
 /**

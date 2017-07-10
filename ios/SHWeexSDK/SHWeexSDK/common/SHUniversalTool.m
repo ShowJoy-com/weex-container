@@ -12,11 +12,11 @@
 /**
  比较版本号大小
  @param version 版本号
- @return YES 传入版本号大于等于当前版本号 NO 传入版本号小于等于当前版本号
+ @param currentVersion 系统版本号
+ @return YES 传入版本号大于等于当前版本号 NO 传入版本号小于当前版本号
  */
-+(BOOL)SHComparedWithTheCurrentVersion:(NSString *)version{
-    NSString *currentVersion = [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleShortVersionString"];
-    if ([version compare:currentVersion options:NSNumericSearch] == NSOrderedAscending){
++(BOOL)SHComparedVersion:(NSString *)version withTheCurrentVersion:(NSString *)currentVersion{
+    if ([currentVersion compare:version options:NSNumericSearch] != NSOrderedAscending){
         return YES;
     }else{
         return NO;
@@ -49,6 +49,7 @@
         return tempDic;
     }
 }
+
 
 
 @end

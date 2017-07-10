@@ -6,37 +6,63 @@
 //  Copyright © 2017年 YunRuo. All rights reserved.
 //
 
-#import "SHWXView.h"
-#import "SHWXConfig.h"
-@interface SHWXView ()
+#import "SHWeexViewController.h"
+#import "SHWeexConfig.h"
+@interface SHWeexViewController ()
 
 @property (nonatomic, strong) UIView * mviewWeexBack;
 @property (nonatomic, strong) NSMutableDictionary* mdicResult;
 @property (nonatomic, strong) WXSDKInstance *instance;
 @property (nonatomic, strong) NSMutableDictionary *mdicWeexViews;
 @property (nonatomic, strong) UIView * mviewCurrentWeex;
+@property (nonatomic, strong) NSMutableDictionary * mdicSentValue;
+@property (nonatomic, assign) BOOL   ISDebug;
+@property (nonatomic, strong) UIViewController * currentViewController;
+@property (nonatomic, assign) CGFloat weexHeight;
 
 @end
 
-@implementation SHWXView
+@implementation SHWeexViewController
 
-- (instancetype)initWithFrame:(CGRect)frame withData:(NSDictionary *)data
+- (instancetype)initWithFrame:(CGRect)frame
 {
-    self = [super initWithFrame:frame];
+    self = [super init];
     if (self) {
-        self.frame = frame;
-        [self initviewWeexBack];
-        [self renderWeexViewWithDict:[self SHDetermineLoadType:data]];
+        self.view.frame = frame;
     }
     return self;
 }
+
+-(void)SHloadWeexPageWithData:(NSDictionary *)data withDebug:(BOOL)ISDebug withController:(UIViewController *)controller{
+    self.weexHeight = [[UIScreen mainScreen] bounds].size.height-64;
+    self.currentViewController=controller;
+    self.ISDebug=ISDebug;
+    self.mdicSentValue = [NSMutableDictionary dictionaryWithDictionary:data];
+    self.mdicWeexViews=[NSMutableDictionary dictionary];
+    [self initviewWeexBack];
+    [self renderWeexViewWithDict:[self SHDetermineLoadType:data]];
+}
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    // Do any additional setup after loading the view.
+}
+
+- (void)dealloc
+{
+    [_instance destroyInstance];
+}
+
 #pragma mark - init -
 /**
  初始化背景
  */
 -(void)initviewWeexBack{
-    self.mviewWeexBack = [[UIView alloc] initWithFrame:CGRectMake(0, 0, CGRectGetWidth(self.frame), CGRectGetHeight(self.frame))];
-    [self addSubview:self.mviewWeexBack];
+    self.mviewWeexBack = [[UIView alloc] initWithFrame:CGRectMake(0, 0, CGRectGetWidth(self.view.frame), CGRectGetHeight(self.view.frame))];
+    [self.view addSubview:self.mviewWeexBack];
+    if (_ISDebug==YES) {
+        UIBarButtonItem *rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"刷新" style:UIBarButtonItemStylePlain target:self action:@selector(refreshWeexView)];
+        self.navigationItem.rightBarButtonItem = rightBarButtonItem;
+    }
 }
 #pragma mark - Methods -
 /**
@@ -45,7 +71,7 @@
  */
 -(NSMutableDictionary *)SHDetermineLoadType:(NSDictionary *)mdicValueSent{
      NSMutableArray * marrWeexPages = [NSMutableArray arrayWithArray:[SHSaveData SHGetDataWithKey:WEEXPAGES]];
-    self.mdicResult = [NSMutableDictionary dictionary];
+    self.mdicResult = [NSMutableDictionary dictionaryWithDictionary:mdicValueSent];
     __weak __typeof__(self) weakSelf = self;
     [marrWeexPages enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
         NSDictionary * mdicValue = [NSDictionary dictionaryWithDictionary:[marrWeexPages objectAtIndex:idx]];
@@ -55,7 +81,7 @@
             if ([SHFileProcessing SHCheckFileISThere:mstrFileName]) {
                 // 判断文件最后修改时间 防止被篡改
                 NSString * mstrLastTime = [NSString stringWithFormat:@"%@",[mdicValue objectForKey:@"modtime"]];
-                if ([mstrLastTime isEqualToString:[SHFileProcessing SHGetFileThelastModifyTime:mstrFileName]]) {
+                if ([mstrLastTime isEqualToString:[SHFileProcessing SHGetFileThelastModifyTime:[SHFileProcessing SHGetFilePathWithFileName:mstrFileName]]]) {
                     weakSelf.mdicResult = [NSMutableDictionary dictionaryWithObjectsAndKeys:[SHFileProcessing SHGetFilePathWithFileName:mstrFileName],@"url",[mdicValue objectForKey:@"h5"],@"h5", nil];
                 }
             }else{
@@ -66,6 +92,20 @@
     return weakSelf.mdicResult;
 }
 
+/**
+ 刷新页面
+ */
+-(void)refreshWeexView{
+    if (self.mdicWeexViews) {
+        self.mdicWeexViews=[NSMutableDictionary dictionary];
+    }
+    if (self.mviewCurrentWeex) {
+        [self.mviewCurrentWeex removeFromSuperview];
+    }
+    [self SHloadWeexPageWithData:self.mdicSentValue withDebug:self.ISDebug withController:self.currentViewController];
+    self.mviewWeexBack.frame = CGRectMake(0, 64, CGRectGetWidth(self.view.frame), CGRectGetHeight(self.view.frame));
+
+}
 /**
  渲染weex页面
 
@@ -79,8 +119,8 @@
     }else{
         _instance = [[WXSDKInstance alloc] init];
         _instance.viewController = self.currentViewController;
-        CGFloat width = self.frame.size.width;
-        _instance.frame = CGRectMake(self.frame.size.width-width, 0, width, self.frame.size.height);
+        CGFloat width = self.view.frame.size.width;
+        _instance.frame = CGRectMake(self.view.frame.size.width-width, 0, width, self.weexHeight);
         __weak typeof(self) weakSelf = self;
         _instance.onCreate = ^(UIView *view) {
             [weakSelf.mdicWeexViews setValue:view forKey:mstrURL];

@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = 'CA7BD75F6C209C656A90A4E5BBE445C9'
-               BlueprintName = 'SocketRocket'
+               BlueprintIdentifier = '356E6DFB891317BD66967BBF298F321D'
+               BlueprintName = 'SHScanQrCode'
                ReferencedContainer = 'container:Pods.xcodeproj'
-               BuildableName = 'libSocketRocket.a'>
+               BuildableName = 'libSHScanQrCode.a'>
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

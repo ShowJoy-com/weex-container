@@ -7,22 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		BC02B6F71EE7DF4900BECDBD /* SHWXNetworkDefaultlmpl.m in Sources */ = {isa = PBXBuildFile; fileRef = BC02B6F61EE7DF4900BECDBD /* SHWXNetworkDefaultlmpl.m */; };
-		BC02B6FA1EE7E0D200BECDBD /* SHWXImgLoaderDefaultImpl.m in Sources */ = {isa = PBXBuildFile; fileRef = BC02B6F91EE7E0D200BECDBD /* SHWXImgLoaderDefaultImpl.m */; };
-		BC02B6FD1EE7E0F300BECDBD /* SHWXImgLoaderDefaultImplProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = BC02B6FC1EE7E0F300BECDBD /* SHWXImgLoaderDefaultImplProtocol.m */; };
-		BC02B7001EE7E55600BECDBD /* SHWXManagement.m in Sources */ = {isa = PBXBuildFile; fileRef = BC02B6FF1EE7E55600BECDBD /* SHWXManagement.m */; };
-		BC02B70D1EE7FF4200BECDBD /* SHSaveData.m in Sources */ = {isa = PBXBuildFile; fileRef = BC02B70C1EE7FF4200BECDBD /* SHSaveData.m */; };
-		BC02B7101EE8039300BECDBD /* SHUniversalTool.m in Sources */ = {isa = PBXBuildFile; fileRef = BC02B70F1EE8039300BECDBD /* SHUniversalTool.m */; };
-		BC02B7141EE8060900BECDBD /* SHFileProcessing.m in Sources */ = {isa = PBXBuildFile; fileRef = BC02B7131EE8060900BECDBD /* SHFileProcessing.m */; };
-		BC3BB4F31EE6B8D900DDDA36 /* SHWXAComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = BC3BB4F21EE6B8D900DDDA36 /* SHWXAComponent.m */; };
-		BC7E0D561EE6A5C90024733B /* SHWXBaseModule.m in Sources */ = {isa = PBXBuildFile; fileRef = BC7E0D551EE6A5C90024733B /* SHWXBaseModule.m */; };
-		BCBB542E1EE94527004B0835 /* SHWXPageModel.m in Sources */ = {isa = PBXBuildFile; fileRef = BCBB542D1EE94527004B0835 /* SHWXPageModel.m */; };
-		BCC7A5041EEA4D8200BAA8D9 /* SHWXView.m in Sources */ = {isa = PBXBuildFile; fileRef = BCC7A5031EEA4D8200BAA8D9 /* SHWXView.m */; };
+		BCA275111F132CE900A39CAE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BCA275101F132CE900A39CAE /* Assets.xcassets */; };
+		BCA275131F132D2B00A39CAE /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BCA275121F132D2B00A39CAE /* Info.plist */; };
+		BCA275181F13492300A39CAE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BCA275151F13492300A39CAE /* AppDelegate.m */; };
+		BCA275191F13492300A39CAE /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BCA275171F13492300A39CAE /* ViewController.m */; };
+		BCA2753B1F134B2300A39CAE /* SHFileProcessing.m in Sources */ = {isa = PBXBuildFile; fileRef = BCA2751E1F134B2200A39CAE /* SHFileProcessing.m */; };
+		BCA2753C1F134B2300A39CAE /* SHSaveData.m in Sources */ = {isa = PBXBuildFile; fileRef = BCA275211F134B2200A39CAE /* SHSaveData.m */; };
+		BCA2753D1F134B2300A39CAE /* SHUniversalTool.m in Sources */ = {isa = PBXBuildFile; fileRef = BCA275231F134B2200A39CAE /* SHUniversalTool.m */; };
+		BCA2753E1F134B2300A39CAE /* SHWXAComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = BCA275271F134B2200A39CAE /* SHWXAComponent.m */; };
+		BCA2753F1F134B2300A39CAE /* SHWXBaseModule.m in Sources */ = {isa = PBXBuildFile; fileRef = BCA2752A1F134B2200A39CAE /* SHWXBaseModule.m */; };
+		BCA275401F134B2300A39CAE /* SHWXNetworkDefaultlmpl.m in Sources */ = {isa = PBXBuildFile; fileRef = BCA2752D1F134B2200A39CAE /* SHWXNetworkDefaultlmpl.m */; };
+		BCA275421F134B2300A39CAE /* SHWeexManager.m in Sources */ = {isa = PBXBuildFile; fileRef = BCA275321F134B2300A39CAE /* SHWeexManager.m */; };
+		BCA275431F134B2300A39CAE /* SHWeexPageModel.m in Sources */ = {isa = PBXBuildFile; fileRef = BCA275341F134B2300A39CAE /* SHWeexPageModel.m */; };
+		BCA275441F134B2300A39CAE /* SHWeexViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BCA275361F134B2300A39CAE /* SHWeexViewController.m */; };
+		BCA2754D1F134BCD00A39CAE /* ISHWeexService.m in Sources */ = {isa = PBXBuildFile; fileRef = BCA275481F134BCD00A39CAE /* ISHWeexService.m */; };
+		BCA2754E1F134BCD00A39CAE /* SHWXImgLoaderDefaultImpl.m in Sources */ = {isa = PBXBuildFile; fileRef = BCA2754A1F134BCD00A39CAE /* SHWXImgLoaderDefaultImpl.m */; };
+		BCA2754F1F134BCD00A39CAE /* SHWXImgLoaderDefaultImplProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = BCA2754C1F134BCD00A39CAE /* SHWXImgLoaderDefaultImplProtocol.m */; };
 		BCF02FD31EE52A120027C0B9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BCF02FD21EE52A120027C0B9 /* main.m */; };
-		BCF02FD61EE52A120027C0B9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BCF02FD51EE52A120027C0B9 /* AppDelegate.m */; };
-		BCF02FD91EE52A120027C0B9 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BCF02FD81EE52A120027C0B9 /* ViewController.m */; };
 		BCF02FDC1EE52A120027C0B9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BCF02FDA1EE52A120027C0B9 /* Main.storyboard */; };
-		BCF02FDE1EE52A120027C0B9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BCF02FDD1EE52A120027C0B9 /* Assets.xcassets */; };
 		BCF02FE11EE52A120027C0B9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BCF02FDF1EE52A120027C0B9 /* LaunchScreen.storyboard */; };
 		BCF02FEC1EE52A120027C0B9 /* SHWeexSDKTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BCF02FEB1EE52A120027C0B9 /* SHWeexSDKTests.m */; };
 		BCF02FF71EE52A120027C0B9 /* SHWeexSDKUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = BCF02FF61EE52A120027C0B9 /* SHWeexSDKUITests.m */; };
@@ -50,42 +52,43 @@
 		2A98324DBB4DC2965D5A48E8 /* Pods-SHWeexSDK.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SHWeexSDK.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SHWeexSDK/Pods-SHWeexSDK.debug.xcconfig"; sourceTree = "<group>"; };
 		4769D3E5B8F945A458B64EB8 /* libPods-SHWeexSDK.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SHWeexSDK.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		90CF8A076847B32401BA44C5 /* Pods-SHWeexSDK.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SHWeexSDK.release.xcconfig"; path = "Pods/Target Support Files/Pods-SHWeexSDK/Pods-SHWeexSDK.release.xcconfig"; sourceTree = "<group>"; };
-		BC02B6F51EE7DF4900BECDBD /* SHWXNetworkDefaultlmpl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHWXNetworkDefaultlmpl.h; sourceTree = "<group>"; };
-		BC02B6F61EE7DF4900BECDBD /* SHWXNetworkDefaultlmpl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHWXNetworkDefaultlmpl.m; sourceTree = "<group>"; };
-		BC02B6F81EE7E0D200BECDBD /* SHWXImgLoaderDefaultImpl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHWXImgLoaderDefaultImpl.h; sourceTree = "<group>"; };
-		BC02B6F91EE7E0D200BECDBD /* SHWXImgLoaderDefaultImpl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHWXImgLoaderDefaultImpl.m; sourceTree = "<group>"; };
-		BC02B6FB1EE7E0F300BECDBD /* SHWXImgLoaderDefaultImplProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHWXImgLoaderDefaultImplProtocol.h; sourceTree = "<group>"; };
-		BC02B6FC1EE7E0F300BECDBD /* SHWXImgLoaderDefaultImplProtocol.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHWXImgLoaderDefaultImplProtocol.m; sourceTree = "<group>"; };
-		BC02B6FE1EE7E55600BECDBD /* SHWXManagement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHWXManagement.h; sourceTree = "<group>"; };
-		BC02B6FF1EE7E55600BECDBD /* SHWXManagement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHWXManagement.m; sourceTree = "<group>"; };
-		BC02B70B1EE7FF4200BECDBD /* SHSaveData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHSaveData.h; sourceTree = "<group>"; };
-		BC02B70C1EE7FF4200BECDBD /* SHSaveData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHSaveData.m; sourceTree = "<group>"; };
-		BC02B70E1EE8039300BECDBD /* SHUniversalTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHUniversalTool.h; sourceTree = "<group>"; };
-		BC02B70F1EE8039300BECDBD /* SHUniversalTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHUniversalTool.m; sourceTree = "<group>"; };
-		BC02B7121EE8060900BECDBD /* SHFileProcessing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHFileProcessing.h; sourceTree = "<group>"; };
-		BC02B7131EE8060900BECDBD /* SHFileProcessing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHFileProcessing.m; sourceTree = "<group>"; };
-		BC3BB4F11EE6B8D900DDDA36 /* SHWXAComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHWXAComponent.h; sourceTree = "<group>"; };
-		BC3BB4F21EE6B8D900DDDA36 /* SHWXAComponent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHWXAComponent.m; sourceTree = "<group>"; };
-		BC7E0D541EE6A5C90024733B /* SHWXBaseModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHWXBaseModule.h; sourceTree = "<group>"; };
-		BC7E0D551EE6A5C90024733B /* SHWXBaseModule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHWXBaseModule.m; sourceTree = "<group>"; };
-		BCBB542C1EE94527004B0835 /* SHWXPageModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHWXPageModel.h; sourceTree = "<group>"; };
-		BCBB542D1EE94527004B0835 /* SHWXPageModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHWXPageModel.m; sourceTree = "<group>"; };
-		BCC7A5021EEA4D8200BAA8D9 /* SHWXView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHWXView.h; sourceTree = "<group>"; };
-		BCC7A5031EEA4D8200BAA8D9 /* SHWXView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHWXView.m; sourceTree = "<group>"; };
-		BCC7A5051EEA792C00BAA8D9 /* SHWXConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SHWXConfig.h; sourceTree = "<group>"; };
+		BCA275101F132CE900A39CAE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		BCA275121F132D2B00A39CAE /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BCA275141F13492300A39CAE /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		BCA275151F13492300A39CAE /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		BCA275161F13492300A39CAE /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		BCA275171F13492300A39CAE /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		BCA2751D1F134B2200A39CAE /* SHFileProcessing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHFileProcessing.h; sourceTree = "<group>"; };
+		BCA2751E1F134B2200A39CAE /* SHFileProcessing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHFileProcessing.m; sourceTree = "<group>"; };
+		BCA275201F134B2200A39CAE /* SHSaveData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHSaveData.h; sourceTree = "<group>"; };
+		BCA275211F134B2200A39CAE /* SHSaveData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHSaveData.m; sourceTree = "<group>"; };
+		BCA275221F134B2200A39CAE /* SHUniversalTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHUniversalTool.h; sourceTree = "<group>"; };
+		BCA275231F134B2200A39CAE /* SHUniversalTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHUniversalTool.m; sourceTree = "<group>"; };
+		BCA275261F134B2200A39CAE /* SHWXAComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHWXAComponent.h; sourceTree = "<group>"; };
+		BCA275271F134B2200A39CAE /* SHWXAComponent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHWXAComponent.m; sourceTree = "<group>"; };
+		BCA275291F134B2200A39CAE /* SHWXBaseModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHWXBaseModule.h; sourceTree = "<group>"; };
+		BCA2752A1F134B2200A39CAE /* SHWXBaseModule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHWXBaseModule.m; sourceTree = "<group>"; };
+		BCA2752C1F134B2200A39CAE /* SHWXNetworkDefaultlmpl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHWXNetworkDefaultlmpl.h; sourceTree = "<group>"; };
+		BCA2752D1F134B2200A39CAE /* SHWXNetworkDefaultlmpl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHWXNetworkDefaultlmpl.m; sourceTree = "<group>"; };
+		BCA275301F134B2300A39CAE /* SHWeexConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHWeexConfig.h; sourceTree = "<group>"; };
+		BCA275311F134B2300A39CAE /* SHWeexManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHWeexManager.h; sourceTree = "<group>"; };
+		BCA275321F134B2300A39CAE /* SHWeexManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHWeexManager.m; sourceTree = "<group>"; };
+		BCA275331F134B2300A39CAE /* SHWeexPageModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHWeexPageModel.h; sourceTree = "<group>"; };
+		BCA275341F134B2300A39CAE /* SHWeexPageModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHWeexPageModel.m; sourceTree = "<group>"; };
+		BCA275351F134B2300A39CAE /* SHWeexViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHWeexViewController.h; sourceTree = "<group>"; };
+		BCA275361F134B2300A39CAE /* SHWeexViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHWeexViewController.m; sourceTree = "<group>"; };
+		BCA275471F134BCD00A39CAE /* ISHWeexService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ISHWeexService.h; sourceTree = "<group>"; };
+		BCA275481F134BCD00A39CAE /* ISHWeexService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ISHWeexService.m; sourceTree = "<group>"; };
+		BCA275491F134BCD00A39CAE /* SHWXImgLoaderDefaultImpl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHWXImgLoaderDefaultImpl.h; sourceTree = "<group>"; };
+		BCA2754A1F134BCD00A39CAE /* SHWXImgLoaderDefaultImpl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHWXImgLoaderDefaultImpl.m; sourceTree = "<group>"; };
+		BCA2754B1F134BCD00A39CAE /* SHWXImgLoaderDefaultImplProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHWXImgLoaderDefaultImplProtocol.h; sourceTree = "<group>"; };
+		BCA2754C1F134BCD00A39CAE /* SHWXImgLoaderDefaultImplProtocol.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHWXImgLoaderDefaultImplProtocol.m; sourceTree = "<group>"; };
 		BCF02FCE1EE52A120027C0B9 /* SHWeexSDK.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SHWeexSDK.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BCF02FD21EE52A120027C0B9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		BCF02FD41EE52A120027C0B9 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		BCF02FD51EE52A120027C0B9 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		BCF02FD71EE52A120027C0B9 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		BCF02FD81EE52A120027C0B9 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		BCF02FDB1EE52A120027C0B9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		BCF02FDD1EE52A120027C0B9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BCF02FE01EE52A120027C0B9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		BCF02FE21EE52A120027C0B9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BCF02FE71EE52A120027C0B9 /* SHWeexSDKTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SHWeexSDKTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BCF02FEB1EE52A120027C0B9 /* SHWeexSDKTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SHWeexSDKTests.m; sourceTree = "<group>"; };
-		BCF02FED1EE52A120027C0B9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BCF02FF21EE52A120027C0B9 /* SHWeexSDKUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SHWeexSDKUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BCF02FF61EE52A120027C0B9 /* SHWeexSDKUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SHWeexSDKUITests.m; sourceTree = "<group>"; };
 		BCF02FF81EE52A120027C0B9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -134,72 +137,84 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		BC02B7011EE7FA6400BECDBD /* common */ = {
+		BCA2751A1F134B2200A39CAE /* SHWeexSDK */ = {
 			isa = PBXGroup;
 			children = (
-				BC02B70E1EE8039300BECDBD /* SHUniversalTool.h */,
-				BC02B70F1EE8039300BECDBD /* SHUniversalTool.m */,
-				BC02B7111EE805F300BECDBD /* FileProcessing */,
-				BC02B70A1EE7FF4200BECDBD /* SaveData */,
+				BCA2751B1F134B2200A39CAE /* common */,
+				BCA275241F134B2200A39CAE /* extends */,
+				BCA275301F134B2300A39CAE /* SHWeexConfig.h */,
+				BCA275311F134B2300A39CAE /* SHWeexManager.h */,
+				BCA275321F134B2300A39CAE /* SHWeexManager.m */,
+				BCA275331F134B2300A39CAE /* SHWeexPageModel.h */,
+				BCA275341F134B2300A39CAE /* SHWeexPageModel.m */,
+				BCA275351F134B2300A39CAE /* SHWeexViewController.h */,
+				BCA275361F134B2300A39CAE /* SHWeexViewController.m */,
+			);
+			path = SHWeexSDK;
+			sourceTree = "<group>";
+		};
+		BCA2751B1F134B2200A39CAE /* common */ = {
+			isa = PBXGroup;
+			children = (
+				BCA2751C1F134B2200A39CAE /* FileProcessing */,
+				BCA2751F1F134B2200A39CAE /* SaveData */,
+				BCA275221F134B2200A39CAE /* SHUniversalTool.h */,
+				BCA275231F134B2200A39CAE /* SHUniversalTool.m */,
 			);
 			path = common;
 			sourceTree = "<group>";
 		};
-		BC02B70A1EE7FF4200BECDBD /* SaveData */ = {
+		BCA2751C1F134B2200A39CAE /* FileProcessing */ = {
 			isa = PBXGroup;
 			children = (
-				BC02B70B1EE7FF4200BECDBD /* SHSaveData.h */,
-				BC02B70C1EE7FF4200BECDBD /* SHSaveData.m */,
-			);
-			path = SaveData;
-			sourceTree = "<group>";
-		};
-		BC02B7111EE805F300BECDBD /* FileProcessing */ = {
-			isa = PBXGroup;
-			children = (
-				BC02B7121EE8060900BECDBD /* SHFileProcessing.h */,
-				BC02B7131EE8060900BECDBD /* SHFileProcessing.m */,
+				BCA2751D1F134B2200A39CAE /* SHFileProcessing.h */,
+				BCA2751E1F134B2200A39CAE /* SHFileProcessing.m */,
 			);
 			path = FileProcessing;
 			sourceTree = "<group>";
 		};
-		BC7E0D501EE6A3520024733B /* extends */ = {
+		BCA2751F1F134B2200A39CAE /* SaveData */ = {
 			isa = PBXGroup;
 			children = (
-				BC7E0D511EE6A3520024733B /* component */,
-				BC7E0D521EE6A3520024733B /* module */,
-				BC7E0D531EE6A3520024733B /* protocol */,
+				BCA275201F134B2200A39CAE /* SHSaveData.h */,
+				BCA275211F134B2200A39CAE /* SHSaveData.m */,
+			);
+			path = SaveData;
+			sourceTree = "<group>";
+		};
+		BCA275241F134B2200A39CAE /* extends */ = {
+			isa = PBXGroup;
+			children = (
+				BCA275251F134B2200A39CAE /* component */,
+				BCA275281F134B2200A39CAE /* module */,
+				BCA2752B1F134B2200A39CAE /* protocol */,
 			);
 			path = extends;
 			sourceTree = "<group>";
 		};
-		BC7E0D511EE6A3520024733B /* component */ = {
+		BCA275251F134B2200A39CAE /* component */ = {
 			isa = PBXGroup;
 			children = (
-				BC3BB4F11EE6B8D900DDDA36 /* SHWXAComponent.h */,
-				BC3BB4F21EE6B8D900DDDA36 /* SHWXAComponent.m */,
+				BCA275261F134B2200A39CAE /* SHWXAComponent.h */,
+				BCA275271F134B2200A39CAE /* SHWXAComponent.m */,
 			);
 			path = component;
 			sourceTree = "<group>";
 		};
-		BC7E0D521EE6A3520024733B /* module */ = {
+		BCA275281F134B2200A39CAE /* module */ = {
 			isa = PBXGroup;
 			children = (
-				BC7E0D541EE6A5C90024733B /* SHWXBaseModule.h */,
-				BC7E0D551EE6A5C90024733B /* SHWXBaseModule.m */,
+				BCA275291F134B2200A39CAE /* SHWXBaseModule.h */,
+				BCA2752A1F134B2200A39CAE /* SHWXBaseModule.m */,
 			);
 			path = module;
 			sourceTree = "<group>";
 		};
-		BC7E0D531EE6A3520024733B /* protocol */ = {
+		BCA2752B1F134B2200A39CAE /* protocol */ = {
 			isa = PBXGroup;
 			children = (
-				BC02B6F51EE7DF4900BECDBD /* SHWXNetworkDefaultlmpl.h */,
-				BC02B6F61EE7DF4900BECDBD /* SHWXNetworkDefaultlmpl.m */,
-				BC02B6F81EE7E0D200BECDBD /* SHWXImgLoaderDefaultImpl.h */,
-				BC02B6F91EE7E0D200BECDBD /* SHWXImgLoaderDefaultImpl.m */,
-				BC02B6FB1EE7E0F300BECDBD /* SHWXImgLoaderDefaultImplProtocol.h */,
-				BC02B6FC1EE7E0F300BECDBD /* SHWXImgLoaderDefaultImplProtocol.m */,
+				BCA2752C1F134B2200A39CAE /* SHWXNetworkDefaultlmpl.h */,
+				BCA2752D1F134B2200A39CAE /* SHWXNetworkDefaultlmpl.m */,
 			);
 			path = protocol;
 			sourceTree = "<group>";
@@ -229,15 +244,21 @@
 		BCF02FD01EE52A120027C0B9 /* SHWeexSDK */ = {
 			isa = PBXGroup;
 			children = (
-				BCF030041EE52C0C0027C0B9 /* SHWeexSDK */,
-				BCF02FD41EE52A120027C0B9 /* AppDelegate.h */,
-				BCF02FD51EE52A120027C0B9 /* AppDelegate.m */,
-				BCF02FD71EE52A120027C0B9 /* ViewController.h */,
-				BCF02FD81EE52A120027C0B9 /* ViewController.m */,
+				BCA2751A1F134B2200A39CAE /* SHWeexSDK */,
+				BCA275141F13492300A39CAE /* AppDelegate.h */,
+				BCA275151F13492300A39CAE /* AppDelegate.m */,
+				BCA275161F13492300A39CAE /* ViewController.h */,
+				BCA275171F13492300A39CAE /* ViewController.m */,
+				BCA275471F134BCD00A39CAE /* ISHWeexService.h */,
+				BCA275481F134BCD00A39CAE /* ISHWeexService.m */,
+				BCA275491F134BCD00A39CAE /* SHWXImgLoaderDefaultImpl.h */,
+				BCA2754A1F134BCD00A39CAE /* SHWXImgLoaderDefaultImpl.m */,
+				BCA2754B1F134BCD00A39CAE /* SHWXImgLoaderDefaultImplProtocol.h */,
+				BCA2754C1F134BCD00A39CAE /* SHWXImgLoaderDefaultImplProtocol.m */,
+				BCA275121F132D2B00A39CAE /* Info.plist */,
+				BCA275101F132CE900A39CAE /* Assets.xcassets */,
 				BCF02FDA1EE52A120027C0B9 /* Main.storyboard */,
-				BCF02FDD1EE52A120027C0B9 /* Assets.xcassets */,
 				BCF02FDF1EE52A120027C0B9 /* LaunchScreen.storyboard */,
-				BCF02FE21EE52A120027C0B9 /* Info.plist */,
 				BCF02FD11EE52A120027C0B9 /* Supporting Files */,
 			);
 			path = SHWeexSDK;
@@ -255,7 +276,6 @@
 			isa = PBXGroup;
 			children = (
 				BCF02FEB1EE52A120027C0B9 /* SHWeexSDKTests.m */,
-				BCF02FED1EE52A120027C0B9 /* Info.plist */,
 			);
 			path = SHWeexSDKTests;
 			sourceTree = "<group>";
@@ -267,22 +287,6 @@
 				BCF02FF81EE52A120027C0B9 /* Info.plist */,
 			);
 			path = SHWeexSDKUITests;
-			sourceTree = "<group>";
-		};
-		BCF030041EE52C0C0027C0B9 /* SHWeexSDK */ = {
-			isa = PBXGroup;
-			children = (
-				BC02B7011EE7FA6400BECDBD /* common */,
-				BC7E0D501EE6A3520024733B /* extends */,
-				BC02B6FE1EE7E55600BECDBD /* SHWXManagement.h */,
-				BC02B6FF1EE7E55600BECDBD /* SHWXManagement.m */,
-				BCBB542C1EE94527004B0835 /* SHWXPageModel.h */,
-				BCBB542D1EE94527004B0835 /* SHWXPageModel.m */,
-				BCC7A5021EEA4D8200BAA8D9 /* SHWXView.h */,
-				BCC7A5031EEA4D8200BAA8D9 /* SHWXView.m */,
-				BCC7A5051EEA792C00BAA8D9 /* SHWXConfig.h */,
-			);
-			path = SHWeexSDK;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -397,8 +401,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BCA275131F132D2B00A39CAE /* Info.plist in Resources */,
 				BCF02FE11EE52A120027C0B9 /* LaunchScreen.storyboard in Resources */,
-				BCF02FDE1EE52A120027C0B9 /* Assets.xcassets in Resources */,
+				BCA275111F132CE900A39CAE /* Assets.xcassets in Resources */,
 				BCF02FDC1EE52A120027C0B9 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -472,20 +477,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BCF02FD91EE52A120027C0B9 /* ViewController.m in Sources */,
-				BCF02FD61EE52A120027C0B9 /* AppDelegate.m in Sources */,
-				BC02B7101EE8039300BECDBD /* SHUniversalTool.m in Sources */,
-				BC7E0D561EE6A5C90024733B /* SHWXBaseModule.m in Sources */,
+				BCA2754F1F134BCD00A39CAE /* SHWXImgLoaderDefaultImplProtocol.m in Sources */,
+				BCA2753C1F134B2300A39CAE /* SHSaveData.m in Sources */,
+				BCA275191F13492300A39CAE /* ViewController.m in Sources */,
+				BCA275431F134B2300A39CAE /* SHWeexPageModel.m in Sources */,
+				BCA2753D1F134B2300A39CAE /* SHUniversalTool.m in Sources */,
+				BCA275421F134B2300A39CAE /* SHWeexManager.m in Sources */,
+				BCA2753B1F134B2300A39CAE /* SHFileProcessing.m in Sources */,
+				BCA2753E1F134B2300A39CAE /* SHWXAComponent.m in Sources */,
+				BCA275441F134B2300A39CAE /* SHWeexViewController.m in Sources */,
+				BCA275401F134B2300A39CAE /* SHWXNetworkDefaultlmpl.m in Sources */,
 				BCF02FD31EE52A120027C0B9 /* main.m in Sources */,
-				BC02B6FD1EE7E0F300BECDBD /* SHWXImgLoaderDefaultImplProtocol.m in Sources */,
-				BC02B7141EE8060900BECDBD /* SHFileProcessing.m in Sources */,
-				BC3BB4F31EE6B8D900DDDA36 /* SHWXAComponent.m in Sources */,
-				BCBB542E1EE94527004B0835 /* SHWXPageModel.m in Sources */,
-				BC02B70D1EE7FF4200BECDBD /* SHSaveData.m in Sources */,
-				BC02B6FA1EE7E0D200BECDBD /* SHWXImgLoaderDefaultImpl.m in Sources */,
-				BC02B6F71EE7DF4900BECDBD /* SHWXNetworkDefaultlmpl.m in Sources */,
-				BCC7A5041EEA4D8200BAA8D9 /* SHWXView.m in Sources */,
-				BC02B7001EE7E55600BECDBD /* SHWXManagement.m in Sources */,
+				BCA2753F1F134B2300A39CAE /* SHWXBaseModule.m in Sources */,
+				BCA275181F13492300A39CAE /* AppDelegate.m in Sources */,
+				BCA2754E1F134BCD00A39CAE /* SHWXImgLoaderDefaultImpl.m in Sources */,
+				BCA2754D1F134BCD00A39CAE /* ISHWeexService.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

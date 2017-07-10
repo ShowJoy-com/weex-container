@@ -1,0 +1,1 @@
+../../../SHScanQrCode/SHScanQrCode/SHScanQrCode/UIView+Recognize.h

@@ -4,8 +4,10 @@ platform :ios, '7.0'
 
 pod 'WeexSDK', '~> 0.12.0'   #weexSDK
 pod 'WXDevtool', '~> 0.9.5'  #weex测试SDK
+pod 'SHScanQrCode', '~> 0.0.2'
+# 可以换成其他的网络请求库和图品加载库
+pod 'AFNetworking', '~> 3.1.0' #网络请求
 pod 'PINRemoteImage/iOS', '~> 3.0.0-beta.8' #图片加载
 pod 'PINRemoteImage/PINCache' #图片缓存
-pod 'AFNetworking', '~> 3.1.0' #网络请求
 
 end

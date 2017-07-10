@@ -29,6 +29,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>SHScanQrCode.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>SocketRocket.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -37,12 +42,7 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>2E4FB095371EEFAC22586C07BF7B3316</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>4D168259D91084649DC8FFAA5AA544EE</key>
+		<key>356E6DFB891317BD66967BBF298F321D</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -58,6 +58,16 @@
 			<true/>
 		</dict>
 		<key>9E033EDB5EC0819481B0546434FA577B</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>ABA6BFAA19F6816FF1FEADEAAE2A832D</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>CA7BD75F6C209C656A90A4E5BBE445C9</key>
 		<dict>
 			<key>primary</key>
 			<true/>
