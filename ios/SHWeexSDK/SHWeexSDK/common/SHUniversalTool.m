@@ -50,6 +50,16 @@
     }
 }
 
+/**
+ 字典或数组转json
+ @param object 字典或数组
+ @return json格式数据
+ */
++(NSString *)objectToJsonStr:(id)object{
+    NSData *data=[NSJSONSerialization dataWithJSONObject:object options:NSJSONWritingPrettyPrinted error:nil];
+    NSString *jsonStr=[[NSString alloc]initWithData:data encoding:NSUTF8StringEncoding];
+    return jsonStr;
+}
 
 
 @end

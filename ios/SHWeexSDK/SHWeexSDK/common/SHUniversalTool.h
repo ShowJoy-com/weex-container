@@ -29,4 +29,11 @@
  *  @return NSDictionary
  */
 +(NSDictionary *)SHDictionaryWithURLQuery:(NSString *)query;
+/**
+ 字典或数组转json
+ @param object 字典或数组
+ @return json格式数据
+ */
++(NSString *)objectToJsonStr:(id)object;
+
 @end

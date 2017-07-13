@@ -8,6 +8,7 @@
 
 #import "SHWeexViewController.h"
 #import "SHWeexConfig.h"
+#import "SHWeexManager.h"
 @interface SHWeexViewController ()
 
 @property (nonatomic, strong) UIView * mviewWeexBack;
@@ -23,6 +24,10 @@
 @end
 
 @implementation SHWeexViewController
+
+-(void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+}
 
 - (instancetype)initWithFrame:(CGRect)frame
 {
@@ -45,6 +50,12 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    self.view.backgroundColor=[UIColor whiteColor];
+}
+
+-(void)viewDidAppear:(BOOL)animated{
+    [super viewDidAppear:animated];
+
 }
 
 - (void)dealloc
@@ -57,11 +68,14 @@
  初始化背景
  */
 -(void)initviewWeexBack{
-    self.mviewWeexBack = [[UIView alloc] initWithFrame:CGRectMake(0, 0, CGRectGetWidth(self.view.frame), CGRectGetHeight(self.view.frame))];
+    self.mviewWeexBack = [[UIView alloc] initWithFrame:CGRectMake(0, 64, CGRectGetWidth(self.view.frame), CGRectGetHeight(self.view.frame))];
     [self.view addSubview:self.mviewWeexBack];
     if (_ISDebug==YES) {
         UIBarButtonItem *rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"刷新" style:UIBarButtonItemStylePlain target:self action:@selector(refreshWeexView)];
+        UIBarButtonItem *leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"扫码" style:UIBarButtonItemStylePlain target:self action:@selector(QRCodeClick)];
         self.navigationItem.rightBarButtonItem = rightBarButtonItem;
+        self.navigationItem.rightBarButtonItems = [NSArray arrayWithObjects:leftBarButtonItem,rightBarButtonItem, nil];
+        
     }
 }
 #pragma mark - Methods -
@@ -104,7 +118,6 @@
     }
     [self SHloadWeexPageWithData:self.mdicSentValue withDebug:self.ISDebug withController:self.currentViewController];
     self.mviewWeexBack.frame = CGRectMake(0, 64, CGRectGetWidth(self.view.frame), CGRectGetHeight(self.view.frame));
-
 }
 /**
  渲染weex页面
@@ -178,6 +191,13 @@
             mview.hidden=YES;
         }
     }
+}
+
+/**
+ 调出扫码
+ */
+-(void)QRCodeClick{
+    [[SHWeexManager shareManagement] SHOpenQRCodeScanning:self];
 }
 
 

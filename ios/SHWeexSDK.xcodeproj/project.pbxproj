@@ -7,19 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BC9BAF7B1F17C1E500DBFAF6 /* SHFileProcessing.m in Sources */ = {isa = PBXBuildFile; fileRef = BC9BAF641F17C1E500DBFAF6 /* SHFileProcessing.m */; };
+		BC9BAF7C1F17C1E500DBFAF6 /* SHSaveData.m in Sources */ = {isa = PBXBuildFile; fileRef = BC9BAF671F17C1E500DBFAF6 /* SHSaveData.m */; };
+		BC9BAF7D1F17C1E500DBFAF6 /* SHUniversalTool.m in Sources */ = {isa = PBXBuildFile; fileRef = BC9BAF691F17C1E500DBFAF6 /* SHUniversalTool.m */; };
+		BC9BAF7E1F17C1E500DBFAF6 /* SHWXAComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = BC9BAF6D1F17C1E500DBFAF6 /* SHWXAComponent.m */; };
+		BC9BAF7F1F17C1E500DBFAF6 /* SHWXBaseModule.m in Sources */ = {isa = PBXBuildFile; fileRef = BC9BAF701F17C1E500DBFAF6 /* SHWXBaseModule.m */; };
+		BC9BAF801F17C1E500DBFAF6 /* SHWXNetworkDefaultlmpl.m in Sources */ = {isa = PBXBuildFile; fileRef = BC9BAF731F17C1E500DBFAF6 /* SHWXNetworkDefaultlmpl.m */; };
+		BC9BAF811F17C1E500DBFAF6 /* SHWeexManager.m in Sources */ = {isa = PBXBuildFile; fileRef = BC9BAF761F17C1E500DBFAF6 /* SHWeexManager.m */; };
+		BC9BAF821F17C1E500DBFAF6 /* SHWeexPageModel.m in Sources */ = {isa = PBXBuildFile; fileRef = BC9BAF781F17C1E500DBFAF6 /* SHWeexPageModel.m */; };
+		BC9BAF831F17C1E500DBFAF6 /* SHWeexViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC9BAF7A1F17C1E500DBFAF6 /* SHWeexViewController.m */; };
 		BCA275111F132CE900A39CAE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BCA275101F132CE900A39CAE /* Assets.xcassets */; };
 		BCA275131F132D2B00A39CAE /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BCA275121F132D2B00A39CAE /* Info.plist */; };
 		BCA275181F13492300A39CAE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BCA275151F13492300A39CAE /* AppDelegate.m */; };
 		BCA275191F13492300A39CAE /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BCA275171F13492300A39CAE /* ViewController.m */; };
-		BCA2753B1F134B2300A39CAE /* SHFileProcessing.m in Sources */ = {isa = PBXBuildFile; fileRef = BCA2751E1F134B2200A39CAE /* SHFileProcessing.m */; };
-		BCA2753C1F134B2300A39CAE /* SHSaveData.m in Sources */ = {isa = PBXBuildFile; fileRef = BCA275211F134B2200A39CAE /* SHSaveData.m */; };
-		BCA2753D1F134B2300A39CAE /* SHUniversalTool.m in Sources */ = {isa = PBXBuildFile; fileRef = BCA275231F134B2200A39CAE /* SHUniversalTool.m */; };
-		BCA2753E1F134B2300A39CAE /* SHWXAComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = BCA275271F134B2200A39CAE /* SHWXAComponent.m */; };
-		BCA2753F1F134B2300A39CAE /* SHWXBaseModule.m in Sources */ = {isa = PBXBuildFile; fileRef = BCA2752A1F134B2200A39CAE /* SHWXBaseModule.m */; };
-		BCA275401F134B2300A39CAE /* SHWXNetworkDefaultlmpl.m in Sources */ = {isa = PBXBuildFile; fileRef = BCA2752D1F134B2200A39CAE /* SHWXNetworkDefaultlmpl.m */; };
-		BCA275421F134B2300A39CAE /* SHWeexManager.m in Sources */ = {isa = PBXBuildFile; fileRef = BCA275321F134B2300A39CAE /* SHWeexManager.m */; };
-		BCA275431F134B2300A39CAE /* SHWeexPageModel.m in Sources */ = {isa = PBXBuildFile; fileRef = BCA275341F134B2300A39CAE /* SHWeexPageModel.m */; };
-		BCA275441F134B2300A39CAE /* SHWeexViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BCA275361F134B2300A39CAE /* SHWeexViewController.m */; };
 		BCA2754D1F134BCD00A39CAE /* ISHWeexService.m in Sources */ = {isa = PBXBuildFile; fileRef = BCA275481F134BCD00A39CAE /* ISHWeexService.m */; };
 		BCA2754E1F134BCD00A39CAE /* SHWXImgLoaderDefaultImpl.m in Sources */ = {isa = PBXBuildFile; fileRef = BCA2754A1F134BCD00A39CAE /* SHWXImgLoaderDefaultImpl.m */; };
 		BCA2754F1F134BCD00A39CAE /* SHWXImgLoaderDefaultImplProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = BCA2754C1F134BCD00A39CAE /* SHWXImgLoaderDefaultImplProtocol.m */; };
@@ -52,31 +52,31 @@
 		2A98324DBB4DC2965D5A48E8 /* Pods-SHWeexSDK.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SHWeexSDK.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SHWeexSDK/Pods-SHWeexSDK.debug.xcconfig"; sourceTree = "<group>"; };
 		4769D3E5B8F945A458B64EB8 /* libPods-SHWeexSDK.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SHWeexSDK.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		90CF8A076847B32401BA44C5 /* Pods-SHWeexSDK.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SHWeexSDK.release.xcconfig"; path = "Pods/Target Support Files/Pods-SHWeexSDK/Pods-SHWeexSDK.release.xcconfig"; sourceTree = "<group>"; };
+		BC9BAF631F17C1E500DBFAF6 /* SHFileProcessing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHFileProcessing.h; sourceTree = "<group>"; };
+		BC9BAF641F17C1E500DBFAF6 /* SHFileProcessing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHFileProcessing.m; sourceTree = "<group>"; };
+		BC9BAF661F17C1E500DBFAF6 /* SHSaveData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHSaveData.h; sourceTree = "<group>"; };
+		BC9BAF671F17C1E500DBFAF6 /* SHSaveData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHSaveData.m; sourceTree = "<group>"; };
+		BC9BAF681F17C1E500DBFAF6 /* SHUniversalTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHUniversalTool.h; sourceTree = "<group>"; };
+		BC9BAF691F17C1E500DBFAF6 /* SHUniversalTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHUniversalTool.m; sourceTree = "<group>"; };
+		BC9BAF6C1F17C1E500DBFAF6 /* SHWXAComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHWXAComponent.h; sourceTree = "<group>"; };
+		BC9BAF6D1F17C1E500DBFAF6 /* SHWXAComponent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHWXAComponent.m; sourceTree = "<group>"; };
+		BC9BAF6F1F17C1E500DBFAF6 /* SHWXBaseModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHWXBaseModule.h; sourceTree = "<group>"; };
+		BC9BAF701F17C1E500DBFAF6 /* SHWXBaseModule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHWXBaseModule.m; sourceTree = "<group>"; };
+		BC9BAF721F17C1E500DBFAF6 /* SHWXNetworkDefaultlmpl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHWXNetworkDefaultlmpl.h; sourceTree = "<group>"; };
+		BC9BAF731F17C1E500DBFAF6 /* SHWXNetworkDefaultlmpl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHWXNetworkDefaultlmpl.m; sourceTree = "<group>"; };
+		BC9BAF741F17C1E500DBFAF6 /* SHWeexConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHWeexConfig.h; sourceTree = "<group>"; };
+		BC9BAF751F17C1E500DBFAF6 /* SHWeexManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHWeexManager.h; sourceTree = "<group>"; };
+		BC9BAF761F17C1E500DBFAF6 /* SHWeexManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHWeexManager.m; sourceTree = "<group>"; };
+		BC9BAF771F17C1E500DBFAF6 /* SHWeexPageModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHWeexPageModel.h; sourceTree = "<group>"; };
+		BC9BAF781F17C1E500DBFAF6 /* SHWeexPageModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHWeexPageModel.m; sourceTree = "<group>"; };
+		BC9BAF791F17C1E500DBFAF6 /* SHWeexViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHWeexViewController.h; sourceTree = "<group>"; };
+		BC9BAF7A1F17C1E500DBFAF6 /* SHWeexViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHWeexViewController.m; sourceTree = "<group>"; };
 		BCA275101F132CE900A39CAE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BCA275121F132D2B00A39CAE /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BCA275141F13492300A39CAE /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		BCA275151F13492300A39CAE /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		BCA275161F13492300A39CAE /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		BCA275171F13492300A39CAE /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		BCA2751D1F134B2200A39CAE /* SHFileProcessing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHFileProcessing.h; sourceTree = "<group>"; };
-		BCA2751E1F134B2200A39CAE /* SHFileProcessing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHFileProcessing.m; sourceTree = "<group>"; };
-		BCA275201F134B2200A39CAE /* SHSaveData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHSaveData.h; sourceTree = "<group>"; };
-		BCA275211F134B2200A39CAE /* SHSaveData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHSaveData.m; sourceTree = "<group>"; };
-		BCA275221F134B2200A39CAE /* SHUniversalTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHUniversalTool.h; sourceTree = "<group>"; };
-		BCA275231F134B2200A39CAE /* SHUniversalTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHUniversalTool.m; sourceTree = "<group>"; };
-		BCA275261F134B2200A39CAE /* SHWXAComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHWXAComponent.h; sourceTree = "<group>"; };
-		BCA275271F134B2200A39CAE /* SHWXAComponent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHWXAComponent.m; sourceTree = "<group>"; };
-		BCA275291F134B2200A39CAE /* SHWXBaseModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHWXBaseModule.h; sourceTree = "<group>"; };
-		BCA2752A1F134B2200A39CAE /* SHWXBaseModule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHWXBaseModule.m; sourceTree = "<group>"; };
-		BCA2752C1F134B2200A39CAE /* SHWXNetworkDefaultlmpl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHWXNetworkDefaultlmpl.h; sourceTree = "<group>"; };
-		BCA2752D1F134B2200A39CAE /* SHWXNetworkDefaultlmpl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHWXNetworkDefaultlmpl.m; sourceTree = "<group>"; };
-		BCA275301F134B2300A39CAE /* SHWeexConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHWeexConfig.h; sourceTree = "<group>"; };
-		BCA275311F134B2300A39CAE /* SHWeexManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHWeexManager.h; sourceTree = "<group>"; };
-		BCA275321F134B2300A39CAE /* SHWeexManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHWeexManager.m; sourceTree = "<group>"; };
-		BCA275331F134B2300A39CAE /* SHWeexPageModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHWeexPageModel.h; sourceTree = "<group>"; };
-		BCA275341F134B2300A39CAE /* SHWeexPageModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHWeexPageModel.m; sourceTree = "<group>"; };
-		BCA275351F134B2300A39CAE /* SHWeexViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHWeexViewController.h; sourceTree = "<group>"; };
-		BCA275361F134B2300A39CAE /* SHWeexViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHWeexViewController.m; sourceTree = "<group>"; };
 		BCA275471F134BCD00A39CAE /* ISHWeexService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ISHWeexService.h; sourceTree = "<group>"; };
 		BCA275481F134BCD00A39CAE /* ISHWeexService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ISHWeexService.m; sourceTree = "<group>"; };
 		BCA275491F134BCD00A39CAE /* SHWXImgLoaderDefaultImpl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHWXImgLoaderDefaultImpl.h; sourceTree = "<group>"; };
@@ -137,84 +137,84 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		BCA2751A1F134B2200A39CAE /* SHWeexSDK */ = {
+		BC9BAF601F17C1E500DBFAF6 /* SHWeexSDK */ = {
 			isa = PBXGroup;
 			children = (
-				BCA2751B1F134B2200A39CAE /* common */,
-				BCA275241F134B2200A39CAE /* extends */,
-				BCA275301F134B2300A39CAE /* SHWeexConfig.h */,
-				BCA275311F134B2300A39CAE /* SHWeexManager.h */,
-				BCA275321F134B2300A39CAE /* SHWeexManager.m */,
-				BCA275331F134B2300A39CAE /* SHWeexPageModel.h */,
-				BCA275341F134B2300A39CAE /* SHWeexPageModel.m */,
-				BCA275351F134B2300A39CAE /* SHWeexViewController.h */,
-				BCA275361F134B2300A39CAE /* SHWeexViewController.m */,
+				BC9BAF611F17C1E500DBFAF6 /* common */,
+				BC9BAF6A1F17C1E500DBFAF6 /* extends */,
+				BC9BAF741F17C1E500DBFAF6 /* SHWeexConfig.h */,
+				BC9BAF751F17C1E500DBFAF6 /* SHWeexManager.h */,
+				BC9BAF761F17C1E500DBFAF6 /* SHWeexManager.m */,
+				BC9BAF771F17C1E500DBFAF6 /* SHWeexPageModel.h */,
+				BC9BAF781F17C1E500DBFAF6 /* SHWeexPageModel.m */,
+				BC9BAF791F17C1E500DBFAF6 /* SHWeexViewController.h */,
+				BC9BAF7A1F17C1E500DBFAF6 /* SHWeexViewController.m */,
 			);
 			path = SHWeexSDK;
 			sourceTree = "<group>";
 		};
-		BCA2751B1F134B2200A39CAE /* common */ = {
+		BC9BAF611F17C1E500DBFAF6 /* common */ = {
 			isa = PBXGroup;
 			children = (
-				BCA2751C1F134B2200A39CAE /* FileProcessing */,
-				BCA2751F1F134B2200A39CAE /* SaveData */,
-				BCA275221F134B2200A39CAE /* SHUniversalTool.h */,
-				BCA275231F134B2200A39CAE /* SHUniversalTool.m */,
+				BC9BAF621F17C1E500DBFAF6 /* FileProcessing */,
+				BC9BAF651F17C1E500DBFAF6 /* SaveData */,
+				BC9BAF681F17C1E500DBFAF6 /* SHUniversalTool.h */,
+				BC9BAF691F17C1E500DBFAF6 /* SHUniversalTool.m */,
 			);
 			path = common;
 			sourceTree = "<group>";
 		};
-		BCA2751C1F134B2200A39CAE /* FileProcessing */ = {
+		BC9BAF621F17C1E500DBFAF6 /* FileProcessing */ = {
 			isa = PBXGroup;
 			children = (
-				BCA2751D1F134B2200A39CAE /* SHFileProcessing.h */,
-				BCA2751E1F134B2200A39CAE /* SHFileProcessing.m */,
+				BC9BAF631F17C1E500DBFAF6 /* SHFileProcessing.h */,
+				BC9BAF641F17C1E500DBFAF6 /* SHFileProcessing.m */,
 			);
 			path = FileProcessing;
 			sourceTree = "<group>";
 		};
-		BCA2751F1F134B2200A39CAE /* SaveData */ = {
+		BC9BAF651F17C1E500DBFAF6 /* SaveData */ = {
 			isa = PBXGroup;
 			children = (
-				BCA275201F134B2200A39CAE /* SHSaveData.h */,
-				BCA275211F134B2200A39CAE /* SHSaveData.m */,
+				BC9BAF661F17C1E500DBFAF6 /* SHSaveData.h */,
+				BC9BAF671F17C1E500DBFAF6 /* SHSaveData.m */,
 			);
 			path = SaveData;
 			sourceTree = "<group>";
 		};
-		BCA275241F134B2200A39CAE /* extends */ = {
+		BC9BAF6A1F17C1E500DBFAF6 /* extends */ = {
 			isa = PBXGroup;
 			children = (
-				BCA275251F134B2200A39CAE /* component */,
-				BCA275281F134B2200A39CAE /* module */,
-				BCA2752B1F134B2200A39CAE /* protocol */,
+				BC9BAF6B1F17C1E500DBFAF6 /* component */,
+				BC9BAF6E1F17C1E500DBFAF6 /* module */,
+				BC9BAF711F17C1E500DBFAF6 /* protocol */,
 			);
 			path = extends;
 			sourceTree = "<group>";
 		};
-		BCA275251F134B2200A39CAE /* component */ = {
+		BC9BAF6B1F17C1E500DBFAF6 /* component */ = {
 			isa = PBXGroup;
 			children = (
-				BCA275261F134B2200A39CAE /* SHWXAComponent.h */,
-				BCA275271F134B2200A39CAE /* SHWXAComponent.m */,
+				BC9BAF6C1F17C1E500DBFAF6 /* SHWXAComponent.h */,
+				BC9BAF6D1F17C1E500DBFAF6 /* SHWXAComponent.m */,
 			);
 			path = component;
 			sourceTree = "<group>";
 		};
-		BCA275281F134B2200A39CAE /* module */ = {
+		BC9BAF6E1F17C1E500DBFAF6 /* module */ = {
 			isa = PBXGroup;
 			children = (
-				BCA275291F134B2200A39CAE /* SHWXBaseModule.h */,
-				BCA2752A1F134B2200A39CAE /* SHWXBaseModule.m */,
+				BC9BAF6F1F17C1E500DBFAF6 /* SHWXBaseModule.h */,
+				BC9BAF701F17C1E500DBFAF6 /* SHWXBaseModule.m */,
 			);
 			path = module;
 			sourceTree = "<group>";
 		};
-		BCA2752B1F134B2200A39CAE /* protocol */ = {
+		BC9BAF711F17C1E500DBFAF6 /* protocol */ = {
 			isa = PBXGroup;
 			children = (
-				BCA2752C1F134B2200A39CAE /* SHWXNetworkDefaultlmpl.h */,
-				BCA2752D1F134B2200A39CAE /* SHWXNetworkDefaultlmpl.m */,
+				BC9BAF721F17C1E500DBFAF6 /* SHWXNetworkDefaultlmpl.h */,
+				BC9BAF731F17C1E500DBFAF6 /* SHWXNetworkDefaultlmpl.m */,
 			);
 			path = protocol;
 			sourceTree = "<group>";
@@ -244,7 +244,7 @@
 		BCF02FD01EE52A120027C0B9 /* SHWeexSDK */ = {
 			isa = PBXGroup;
 			children = (
-				BCA2751A1F134B2200A39CAE /* SHWeexSDK */,
+				BC9BAF601F17C1E500DBFAF6 /* SHWeexSDK */,
 				BCA275141F13492300A39CAE /* AppDelegate.h */,
 				BCA275151F13492300A39CAE /* AppDelegate.m */,
 				BCA275161F13492300A39CAE /* ViewController.h */,
@@ -477,21 +477,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BC9BAF7B1F17C1E500DBFAF6 /* SHFileProcessing.m in Sources */,
+				BC9BAF7F1F17C1E500DBFAF6 /* SHWXBaseModule.m in Sources */,
 				BCA2754F1F134BCD00A39CAE /* SHWXImgLoaderDefaultImplProtocol.m in Sources */,
-				BCA2753C1F134B2300A39CAE /* SHSaveData.m in Sources */,
 				BCA275191F13492300A39CAE /* ViewController.m in Sources */,
-				BCA275431F134B2300A39CAE /* SHWeexPageModel.m in Sources */,
-				BCA2753D1F134B2300A39CAE /* SHUniversalTool.m in Sources */,
-				BCA275421F134B2300A39CAE /* SHWeexManager.m in Sources */,
-				BCA2753B1F134B2300A39CAE /* SHFileProcessing.m in Sources */,
-				BCA2753E1F134B2300A39CAE /* SHWXAComponent.m in Sources */,
-				BCA275441F134B2300A39CAE /* SHWeexViewController.m in Sources */,
-				BCA275401F134B2300A39CAE /* SHWXNetworkDefaultlmpl.m in Sources */,
+				BC9BAF7C1F17C1E500DBFAF6 /* SHSaveData.m in Sources */,
+				BC9BAF801F17C1E500DBFAF6 /* SHWXNetworkDefaultlmpl.m in Sources */,
 				BCF02FD31EE52A120027C0B9 /* main.m in Sources */,
-				BCA2753F1F134B2300A39CAE /* SHWXBaseModule.m in Sources */,
 				BCA275181F13492300A39CAE /* AppDelegate.m in Sources */,
 				BCA2754E1F134BCD00A39CAE /* SHWXImgLoaderDefaultImpl.m in Sources */,
 				BCA2754D1F134BCD00A39CAE /* ISHWeexService.m in Sources */,
+				BC9BAF831F17C1E500DBFAF6 /* SHWeexViewController.m in Sources */,
+				BC9BAF821F17C1E500DBFAF6 /* SHWeexPageModel.m in Sources */,
+				BC9BAF7D1F17C1E500DBFAF6 /* SHUniversalTool.m in Sources */,
+				BC9BAF7E1F17C1E500DBFAF6 /* SHWXAComponent.m in Sources */,
+				BC9BAF811F17C1E500DBFAF6 /* SHWeexManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

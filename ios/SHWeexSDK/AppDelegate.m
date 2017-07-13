@@ -24,6 +24,7 @@
     ISHWeexService * WeexService = [[ISHWeexService alloc] init];
     [[SHWeexManager shareManagement] init:application weexService:WeexService];
     [WXSDKEngine registerHandler:[SHWXImgLoaderDefaultImpl new] withProtocol:@protocol(WXImgLoaderProtocol)];
+    
     ViewController * vc = [[ViewController alloc] init];
     UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:vc];
     self.window.rootViewController=nav;

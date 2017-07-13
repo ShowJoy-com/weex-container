@@ -58,6 +58,7 @@
     if (_href && [_href length] > 0) {
         NSString * mstrUrl = _href;
         if (mstrUrl.length) {
+             NSLog(@"mstrUrl========%@",mstrUrl);
             //绝对路径
             if ([[[SHWeexManager shareManagement] weexService] isSupportHttps]==YES) {
                 mstrUrl = [mstrUrl stringByReplacingOccurrencesOfString:@"http://" withString:@"https://"];

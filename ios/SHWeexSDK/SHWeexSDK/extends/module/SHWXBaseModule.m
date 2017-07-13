@@ -8,7 +8,7 @@
 
 #import "SHWXBaseModule.h"
 #import "SHWeexManager.h"
-
+#import "SHWeexViewController.h"
 @implementation SHWXBaseModule
 
 @synthesize weexInstance;
@@ -52,6 +52,24 @@ WX_EXPORT_METHOD(@selector(fireGlobalEvent: data: callback:))
 
 }
 /**
+ 打开连接
+ @param controller 类名
+ @param url 连接
+ @param force 强制用h5打开，不会转成weex 或者native
+ */
+-(void)openUrl:(UIViewController *)controller url:(NSString *)url force:(BOOL)force{
+    NSMutableDictionary * mdicSentValue = [NSMutableDictionary dictionaryWithDictionary:[[SHWeexManager shareManagement] SHGetDataPushToWeexController:url]];
+    NSString * mstrUrlhttp = [mdicSentValue objectForKey:@"url"];
+    if (![mstrUrlhttp containsString:@"http"]) {
+        mstrUrlhttp = [NSString stringWithFormat:@"%@%@",[[[SHWeexManager shareManagement] weexService] getDefaultHost],mstrUrlhttp];
+        [mdicSentValue setValue:mstrUrlhttp forKey:@"url"];
+    }
+    SHWeexViewController * mweexVC = [[SHWeexViewController alloc] initWithFrame:CGRectMake(0, 0,[[UIScreen mainScreen] bounds].size.width , [[UIScreen mainScreen] bounds].size.height-64)];
+    [mweexVC SHloadWeexPageWithData:mdicSentValue withDebug:YES withController:controller];
+    [controller.navigationController pushViewController:mweexVC animated:YES];
+    
+}
+/**
  关闭当前controller，返回到上一级页面
  @param strJson 可传值（暂无用）
  */
@@ -78,7 +96,7 @@ WX_EXPORT_METHOD(@selector(fireGlobalEvent: data: callback:))
  */
 - (void)setTitle:(NSString *)strTitle
 {
-    [[self getCurrentNavigationController] setTitle:strTitle];
+    [[self getCurrentViewController] setTitle:strTitle];
 }
 
 /**

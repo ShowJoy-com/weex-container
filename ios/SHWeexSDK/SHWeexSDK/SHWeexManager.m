@@ -31,15 +31,23 @@
  */
 -(void)init:(UIApplication *)applocation weexService:(ISHWeexService *)weexService{
     self.weexService = weexService;
+    
+    
+    // 初始化全局sdk环境
     [WXSDKEngine initSDKEnvironment];
     // 非线上环境时 输出log信息和debug信息
     if ([weexService isRelease]==NO) {
         [WXLog setLogLevel:WXLogLevelAll];
         [WXDebugTool setDebug:YES];
     }
+    // 注册自定义moudle
     [WXSDKEngine registerModule:@"shBase" withClass:[SHWXBaseModule class]];
+    // 注册自定义协议
     [WXSDKEngine registerHandler:[SHWXNetworkDefaultlmpl new] withProtocol:@protocol(WXURLRewriteProtocol)];
+    // 注册自定义组件
     [WXSDKEngine registerComponent:@"a" withClass:NSClassFromString(@"SHWXAComponent")];
+    
+    
     // 下载weex文件
     [self SHDownloadFileOfWeex:[self.weexService requestWeexConfig]];
 }
@@ -245,7 +253,6 @@
         [controller dismissViewControllerAnimated:YES completion:^{
             
         }];
-        NSLog(@"%@",qrString);
         [self SHOpenWeexControllerTest:qrString withController:controller];
     };
     qrcodevc.ScanQrCodeFailBlock = ^(ScanQrCodeViewController *aqrvc){
@@ -287,7 +294,6 @@
         }else if ([[elts firstObject] isEqualToString:@"_wx_tpl"]) {
             NSString *tplURL = [[elts lastObject]  stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
             NSDictionary * mdicSentValue = [NSDictionary dictionaryWithObjectsAndKeys:tplURL,@"url",@"",@"h5", nil];
-            NSLog(@"mdicSentValue====%@",mdicSentValue);
             SHWeexViewController * mweexVC = [[SHWeexViewController alloc] initWithFrame:CGRectMake(0, 0,[[UIScreen mainScreen] bounds].size.width , [[UIScreen mainScreen] bounds].size.height-64)];
             [mweexVC SHloadWeexPageWithData:mdicSentValue withDebug:YES withController:controller];
             [controller.navigationController pushViewController:mweexVC animated:YES];
