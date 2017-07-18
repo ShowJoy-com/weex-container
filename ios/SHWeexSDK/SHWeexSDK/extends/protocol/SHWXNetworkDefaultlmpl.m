@@ -7,7 +7,7 @@
 //
 
 #import "SHWXNetworkDefaultlmpl.h"
-
+#import "SHWeexManager.h"
 @implementation SHWXNetworkDefaultlmpl
 
 

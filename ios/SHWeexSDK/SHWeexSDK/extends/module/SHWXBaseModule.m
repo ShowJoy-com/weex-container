@@ -18,7 +18,7 @@ WX_EXPORT_METHOD(@selector(close:))
 WX_EXPORT_METHOD(@selector(showTitleBar:))
 WX_EXPORT_METHOD(@selector(setTitle:))
 WX_EXPORT_METHOD(@selector(showLoading:))
-WX_EXPORT_METHOD(@selector(showLoading))
+WX_EXPORT_METHOD(@selector(showLoadingOnlyText:))
 WX_EXPORT_METHOD(@selector(hideLoading))
 WX_EXPORT_METHOD(@selector(fireGlobalEvent: data: callback:))
 /**
@@ -27,20 +27,7 @@ WX_EXPORT_METHOD(@selector(fireGlobalEvent: data: callback:))
  */
 -(void)loadPage:(NSString *)mstrUrl{
     if (mstrUrl.length) {
-        //绝对路径
-        if ([mstrUrl containsString:@"http://"]) {
-            if ([[[SHWeexManager shareManagement] weexService] isSupportHttps]==YES) {
-                mstrUrl = [mstrUrl stringByReplacingOccurrencesOfString:@"http://" withString:@"https://"];
-            }
-            
-        }
-        //相对路径
-        if (![mstrUrl containsString:@"://"]) {
-            if ([[mstrUrl substringToIndex:1] isEqualToString:@"/"]) {
-                mstrUrl = [mstrUrl substringFromIndex:1];
-            }
-            mstrUrl = [NSString stringWithFormat:@"%@%@",[[[SHWeexManager shareManagement] weexService] getDefaultHost],mstrUrl];
-        }
+        mstrUrl = [[SHWeexManager shareManagement] checkDomain:mstrUrl];
         //协议跳转
         if ([mstrUrl containsString:@"http://"] || [mstrUrl containsString:@"https://"]) {
             [[[SHWeexManager shareManagement] weexService] openUrl:[self getCurrentViewController] url:mstrUrl force:NO];
@@ -49,24 +36,25 @@ WX_EXPORT_METHOD(@selector(fireGlobalEvent: data: callback:))
         //其他跳转
         [[UIApplication sharedApplication] openURL:[NSURL URLWithString:mstrUrl]];
     }
-
 }
+
 /**
  打开连接
  @param controller 类名
- @param url 连接
+ @param mstrUrl 连接
  @param force 强制用h5打开，不会转成weex 或者native
  */
--(void)openUrl:(UIViewController *)controller url:(NSString *)url force:(BOOL)force{
-    NSMutableDictionary * mdicSentValue = [NSMutableDictionary dictionaryWithDictionary:[[SHWeexManager shareManagement] SHGetDataPushToWeexController:url]];
-    NSString * mstrUrlhttp = [mdicSentValue objectForKey:@"url"];
-    if (![mstrUrlhttp containsString:@"http"]) {
-        mstrUrlhttp = [NSString stringWithFormat:@"%@%@",[[[SHWeexManager shareManagement] weexService] getDefaultHost],mstrUrlhttp];
-        [mdicSentValue setValue:mstrUrlhttp forKey:@"url"];
+-(void)openUrl:(UIViewController *)controller url:(NSString *)mstrUrl force:(BOOL)force{
+    if (mstrUrl.length) {
+        mstrUrl = [[SHWeexManager shareManagement] checkDomain:mstrUrl];
+        //协议跳转
+        if ([mstrUrl containsString:@"http://"] || [mstrUrl containsString:@"https://"]) {
+            [[[SHWeexManager shareManagement] weexService] openUrl:[self getCurrentViewController] url:mstrUrl force:NO];
+            return;
+        }
+        //其他跳转
+        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:mstrUrl]];
     }
-    SHWeexViewController * mweexVC = [[SHWeexViewController alloc] initWithFrame:CGRectMake(0, 0,[[UIScreen mainScreen] bounds].size.width , [[UIScreen mainScreen] bounds].size.height-64)];
-    [mweexVC SHloadWeexPageWithData:mdicSentValue withDebug:YES withController:controller];
-    [controller.navigationController pushViewController:mweexVC animated:YES];
     
 }
 /**
@@ -96,27 +84,27 @@ WX_EXPORT_METHOD(@selector(fireGlobalEvent: data: callback:))
  */
 - (void)setTitle:(NSString *)strTitle
 {
-    [[self getCurrentViewController] setTitle:strTitle];
+    //[[self getCurrentViewController] setTitle:strTitle];
 }
-
+/**
+ 显示Loading 仅是文案
+ @param text 文案
+ */
+-(void)showLoadingOnlyText:(NSString *)text{
+    [[[SHWeexManager shareManagement] weexService] showLoadingOnlyText:text view:[[self getCurrentViewController] view]];
+}
 /**
  显示Loading
  @param text 自定义loading文案
  */
 -(void)showLoading:(NSString *)text{
-    [[[SHWeexManager shareManagement] weexService] showLoading:text];
-}
-/**
- 显示Loading 无文案
- */
--(void)showLoading{
-    [[[SHWeexManager shareManagement] weexService] showLoading];
+    [[[SHWeexManager shareManagement] weexService] showLoading:text view:[[self getCurrentViewController] view]];
 }
 /**
  隐藏Loading
  */
 -(void)hideLoading{
-    [[[SHWeexManager shareManagement] weexService] hideLoading];
+    [[[SHWeexManager shareManagement] weexService] hideLoading:[[self getCurrentViewController] view]];
 }
 
 /**

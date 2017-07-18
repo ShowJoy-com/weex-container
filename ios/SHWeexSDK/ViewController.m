@@ -32,7 +32,8 @@
 -(void)ClickWeex:(UIButton *)btn{
     if (btn.tag==0) {
         SHWeexViewController * vc = [[SHWeexViewController alloc] initWithFrame:CGRectMake(0, 64,[[UIScreen mainScreen] bounds].size.width , [[UIScreen mainScreen] bounds].size.height-64)];
-        [vc SHloadWeexPageWithData:[[SHWeexManager shareManagement] SHGetDataPushToWeexController:@"http://ocr4ojfnd.bkt.clouddn.com/foo.js"] withDebug:YES withController:self];
+        NSDictionary * mdicSentValue = [NSDictionary dictionaryWithObjectsAndKeys:@"http://ocr4ojfnd.bkt.clouddn.com/foo.js",@"url",@"",@"h5",@"login",@"page", nil];
+          [vc SHloadWeexPageWithData:mdicSentValue withRelease:NO withController:self];
         [self.navigationController pushViewController:vc animated:YES];
     }else{
         [[SHWeexManager shareManagement] SHOpenQRCodeScanning:self];

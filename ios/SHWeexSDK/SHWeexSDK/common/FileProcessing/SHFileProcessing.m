@@ -81,6 +81,19 @@
     }
 }
 /**
+ 将文件原存储的的地址 ，转换成新的存储地址
+ */
++(void)SHMoveItemAtURL:(NSURL *)oldUrl toURLWithFileName:(NSString *)fileName{
+    NSLog(@"%@======%@",oldUrl,fileName);
+    NSFileManager *fileManager = [NSFileManager defaultManager];
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *cacheDir = [paths objectAtIndex:0];
+    NSString *mstrPath = [cacheDir stringByAppendingPathComponent:fileName];
+    if (mstrPath.length>0) {
+        [fileManager moveItemAtURL:oldUrl toURL:[NSURL fileURLWithPath:mstrPath] error:nil];
+    }
+}
+/**
  通过文件名获取文件路径
  
  @param fileName 文件名

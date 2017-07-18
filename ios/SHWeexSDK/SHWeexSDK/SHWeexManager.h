@@ -37,5 +37,12 @@
  打开二维码扫描
  */
 -(void)SHOpenQRCodeScanning:(UIViewController *)controller;
+/**
+ 检查域名是否可用 自动拼上域名 支持相对地址 以及 https
+ 
+ @param mstrUrl 传入域名判断
+ @return 返回替换的域名
+ */
+-(NSString *)checkDomain:(NSString *)mstrUrl;
 
 @end

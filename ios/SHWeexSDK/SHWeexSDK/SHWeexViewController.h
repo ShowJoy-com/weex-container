@@ -21,9 +21,9 @@
  加载weex页面
 
  @param data 传入字典
- @param ISDebug 是否测试模式 YES是
+ @param ISRelease 是否发布模式 YES是
  */
--(void)SHloadWeexPageWithData:(NSDictionary *)data withDebug:(BOOL)ISDebug withController:(UIViewController *)controller;
+-(void)SHloadWeexPageWithData:(NSDictionary *)data withRelease:(BOOL)ISRelease withController:(UIViewController *)controller;
 @property (nonatomic, assign) id <SHWeexViewDelegate> delegate;
 
 @end

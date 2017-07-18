@@ -52,4 +52,9 @@
  @return 文件路径
  */
 +(NSString *)SHGetFilePathWithFileName:(NSString *)fileName;
+/**
+ 将文件原存储的的地址 ，转换成新的存储地址
+ */
++(void)SHMoveItemAtURL:(NSURL *)oldUrl toURLWithFileName:(NSString *)fileName;
+
 @end

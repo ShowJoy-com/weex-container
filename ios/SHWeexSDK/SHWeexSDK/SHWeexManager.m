@@ -9,7 +9,6 @@
 #import "SHWeexManager.h"
 #import "SHWeexConfig.h"
 #import "SHWXBaseModule.h"
-#import "SHWXImgLoaderDefaultImpl.h"
 #import "SHWXNetworkDefaultlmpl.h"
 #import "ScanQrCodeViewController.h"
 #import "SHWeexViewController.h"
@@ -31,8 +30,6 @@
  */
 -(void)init:(UIApplication *)applocation weexService:(ISHWeexService *)weexService{
     self.weexService = weexService;
-    
-    
     // 初始化全局sdk环境
     [WXSDKEngine initSDKEnvironment];
     // 非线上环境时 输出log信息和debug信息
@@ -46,8 +43,6 @@
     [WXSDKEngine registerHandler:[SHWXNetworkDefaultlmpl new] withProtocol:@protocol(WXURLRewriteProtocol)];
     // 注册自定义组件
     [WXSDKEngine registerComponent:@"a" withClass:NSClassFromString(@"SHWXAComponent")];
-    
-    
     // 下载weex文件
     [self SHDownloadFileOfWeex:[self.weexService requestWeexConfig]];
 }
@@ -58,19 +53,24 @@
  @param marrWeexPages weex数据
  */
 -(void)SHDownloadFileOfWeex:(NSArray *)marrWeexPages{
-    NSMutableArray * marrWeexPagesAvailable = [NSMutableArray arrayWithArray:[self SHFilterWeexPages:marrWeexPages]];
-    if (marrWeexPagesAvailable.count>0) {
-        // 每次下载前保存最新的weexPages
-        [SHSaveData SHSavaDataWithKey:WEEXPAGES withData:marrWeexPagesAvailable];
-        // 遍历下载weexpages
-        [marrWeexPages enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-            NSDictionary * mdicValue = [NSDictionary dictionaryWithDictionary:[marrWeexPagesAvailable objectAtIndex:idx]];
-            if ([self SHCheckISDownLoadJswithDic:mdicValue]) {
-                // 下载weex文件
-                [self downLoadWeexFile:mdicValue];
-            }
-        }];
-    }
+    dispatch_async(dispatch_queue_create(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        NSMutableArray * marrWeexPagesAvailable = [NSMutableArray arrayWithArray:[self SHFilterWeexPages:marrWeexPages]];
+        if (marrWeexPagesAvailable.count>0) {
+            // 每次下载前保存最新的weexPages
+            [SHSaveData SHSavaDataWithKey:WEEXPAGES withData:marrWeexPagesAvailable];
+            // 遍历下载weexpages
+            [marrWeexPages enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+                NSDictionary * mdicValue = [NSDictionary dictionaryWithDictionary:[marrWeexPagesAvailable objectAtIndex:idx]];
+                if ([self SHCheckISDownLoadJswithDic:mdicValue]) {
+                    // 下载weex文件
+                    [self downLoadWeexFile:mdicValue];
+                }
+            }];
+            dispatch_async(dispatch_get_main_queue(), ^{
+                
+            });
+        }
+    });
 }
 
 #pragma mark - Request
@@ -80,42 +80,84 @@
 
  @param dicValue weexpage
  */
+//- (void)downLoadWeexFile:(NSDictionary *)dicValue{
+//    // 下载的weex链接
+//    NSString * url = [NSString stringWithFormat:@"%@",[dicValue objectForKey:@"url"]];
+//    NSString * mstrRemoteMD5 = [NSString stringWithFormat:@"%@",[dicValue objectForKey:@"md5"]];
+//    NSString * mstrRemotePage = [NSString stringWithFormat:@"%@",[dicValue objectForKey:@"page"]];
+//    NSURL *URL = [NSURL URLWithString:url];
+//    NSURLSessionConfiguration *configuration = [NSURLSessionConfiguration defaultSessionConfiguration];
+//    AFURLSessionManager *manager = [[AFURLSessionManager alloc] initWithSessionConfiguration:configuration];
+//    NSURLRequest *request = [NSURLRequest requestWithURL:URL];
+//    NSURLSessionDownloadTask * downloadTask = [manager downloadTaskWithRequest:request progress:^(NSProgress * _Nonnull downloadProgress) {
+//    } destination:^NSURL * _Nonnull(NSURL * _Nonnull targetPath, NSURLResponse * _Nonnull response) {
+//        // 返回下载后的保存路径 下载前先清除已存在的该文件
+//        NSString * mstrFileName = [NSString stringWithFormat:@"weex_%@.js",[dicValue objectForKey:@"page"]];
+//        [SHFileProcessing SHRemoveLocalFileWithFileName:mstrFileName];
+//        NSString * path = [SHFileProcessing SHGetFilePathWithFileName:mstrFileName];
+//        return [NSURL fileURLWithPath:path];
+//    } completionHandler:^(NSURLResponse * _Nonnull response, NSURL * _Nullable filePath, NSError * _Nullable error) {
+//        NSString * mstrPath = filePath.path;
+//        if (mstrPath) {
+//            // 校验文件MD5和远程MD5是否相同
+//            NSString * fileMd5 = [SHFileProcessing SHGetFileMD5WithPath:mstrPath];
+//            if (mstrRemoteMD5.length>0) {
+//                if ([fileMd5 isEqualToString:mstrRemoteMD5]) {
+//                    [self SHRecordFileThelastModifyTimeWithPath:mstrPath withDic:dicValue];
+//                }else{
+//                    NSString * mstrFileName = [NSString stringWithFormat:@"weex_%@.js",mstrRemotePage];
+//                    // MD5校验，如果不成功把已下载的JS文件删除
+//                    [SHFileProcessing SHRemoveLocalFileWithFileName:mstrFileName];
+//                    
+//                }
+//            }else{
+//                [self SHRecordFileThelastModifyTimeWithPath:mstrPath withDic:dicValue];
+//            }
+//        }
+//    }];
+//    [downloadTask resume];
+//}
+/**
+ 下载weex文件
+ 
+ @param dicValue weexpage
+ */
 - (void)downLoadWeexFile:(NSDictionary *)dicValue{
     // 下载的weex链接
     NSString * url = [NSString stringWithFormat:@"%@",[dicValue objectForKey:@"url"]];
     NSString * mstrRemoteMD5 = [NSString stringWithFormat:@"%@",[dicValue objectForKey:@"md5"]];
     NSString * mstrRemotePage = [NSString stringWithFormat:@"%@",[dicValue objectForKey:@"page"]];
+    url = [self checkDomain:url];
     NSURL *URL = [NSURL URLWithString:url];
-    NSURLSessionConfiguration *configuration = [NSURLSessionConfiguration defaultSessionConfiguration];
-    AFURLSessionManager *manager = [[AFURLSessionManager alloc] initWithSessionConfiguration:configuration];
-    NSURLRequest *request = [NSURLRequest requestWithURL:URL];
-    NSURLSessionDownloadTask * downloadTask = [manager downloadTaskWithRequest:request progress:^(NSProgress * _Nonnull downloadProgress) {
-    } destination:^NSURL * _Nonnull(NSURL * _Nonnull targetPath, NSURLResponse * _Nonnull response) {
-        // 返回下载后的保存路径 下载前先清除已存在的该文件
-        NSString * mstrFileName = [NSString stringWithFormat:@"weex_%@.js",[dicValue objectForKey:@"page"]];
-        [SHFileProcessing SHRemoveLocalFileWithFileName:mstrFileName];
-        NSString * path = [SHFileProcessing SHGetFilePathWithFileName:mstrFileName];
-        return [NSURL fileURLWithPath:path];
-    } completionHandler:^(NSURLResponse * _Nonnull response, NSURL * _Nullable filePath, NSError * _Nullable error) {
-        NSString * mstrPath = filePath.path;
-        if (mstrPath) {
-            // 校验文件MD5和远程MD5是否相同
-            NSString * fileMd5 = [SHFileProcessing SHGetFileMD5WithPath:mstrPath];
-            if (mstrRemoteMD5.length>0) {
-                if ([fileMd5 isEqualToString:mstrRemoteMD5]) {
-                    [self SHRecordFileThelastModifyTimeWithPath:mstrPath withDic:dicValue];
+    NSURLSession *session = [NSURLSession sharedSession];
+    NSURLSessionDownloadTask *task = [session downloadTaskWithURL:URL completionHandler:^(NSURL *location, NSURLResponse *response, NSError *error) {
+        if (!error) {
+            NSString * mstrFileName = [NSString stringWithFormat:@"weex_%@.js",[dicValue objectForKey:@"page"]];
+            [SHFileProcessing SHRemoveLocalFileWithFileName:mstrFileName];
+            [SHFileProcessing SHMoveItemAtURL:location toURLWithFileName:mstrFileName];
+            NSString * mstrPath = [SHFileProcessing SHGetFilePathWithFileName:mstrFileName];
+            if (mstrPath) {
+                // 校验文件MD5和远程MD5是否相同
+                NSString * fileMd5 = [SHFileProcessing SHGetFileMD5WithPath:mstrPath];
+                NSLog(@"fileMd5======%@",fileMd5);
+                if (mstrRemoteMD5.length>0) {
+                    if ([fileMd5 isEqualToString:mstrRemoteMD5]) {
+                        [self SHRecordFileThelastModifyTimeWithPath:mstrPath withDic:dicValue];
+                    }else{
+                        NSString * mstrFileName = [NSString stringWithFormat:@"weex_%@.js",mstrRemotePage];
+                        // MD5校验，如果不成功把已下载的JS文件删除
+                        [SHFileProcessing SHRemoveLocalFileWithFileName:mstrFileName];
+                        
+                    }
                 }else{
-                    NSString * mstrFileName = [NSString stringWithFormat:@"weex_%@.js",mstrRemotePage];
-                    // MD5校验，如果不成功把已下载的JS文件删除
-                    [SHFileProcessing SHRemoveLocalFileWithFileName:mstrFileName];
-                    
+                    NSLog(@"fileMd5======%@",mstrPath);
+                    [self SHRecordFileThelastModifyTimeWithPath:mstrPath withDic:dicValue];
                 }
-            }else{
-                [self SHRecordFileThelastModifyTimeWithPath:mstrPath withDic:dicValue];
             }
+
         }
     }];
-    [downloadTask resume];
+    [task resume];
 }
 
 
@@ -295,13 +337,36 @@
             NSString *tplURL = [[elts lastObject]  stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
             NSDictionary * mdicSentValue = [NSDictionary dictionaryWithObjectsAndKeys:tplURL,@"url",@"",@"h5", nil];
             SHWeexViewController * mweexVC = [[SHWeexViewController alloc] initWithFrame:CGRectMake(0, 0,[[UIScreen mainScreen] bounds].size.width , [[UIScreen mainScreen] bounds].size.height-64)];
-            [mweexVC SHloadWeexPageWithData:mdicSentValue withDebug:YES withController:controller];
+            [mweexVC SHloadWeexPageWithData:mdicSentValue withRelease:[[[SHWeexManager shareManagement] weexService] isRelease] withController:controller];
             [controller.navigationController pushViewController:mweexVC animated:YES];
             
         }
     }
 }
 
+/**
+ 检查域名是否可用 自动拼上域名 支持相对地址 以及 https
+
+ @param mstrUrl 传入域名判断
+ @return 返回替换的域名
+ */
+-(NSString *)checkDomain:(NSString *)mstrUrl{
+    //绝对路径
+    if ([mstrUrl containsString:@"http://"]) {
+        if ([[[SHWeexManager shareManagement] weexService] isSupportHttps]==YES) {
+            mstrUrl = [mstrUrl stringByReplacingOccurrencesOfString:@"http://" withString:@"https://"];
+        }
+        
+    }
+    //相对路径
+    if (![mstrUrl containsString:@"://"]) {
+        if ([[mstrUrl substringToIndex:1] isEqualToString:@"/"]) {
+            mstrUrl = [mstrUrl substringFromIndex:1];
+        }
+        mstrUrl = [NSString stringWithFormat:@"%@%@",[[[SHWeexManager shareManagement] weexService] getDefaultHost],mstrUrl];
+    }
+    return mstrUrl;
+}
 
 
 @end

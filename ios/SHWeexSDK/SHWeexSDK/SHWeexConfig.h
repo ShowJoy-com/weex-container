@@ -13,8 +13,10 @@
 #import "SHSaveData.h"
 #import "SHFileProcessing.h"
 #import "SHWeexPageModel.h"
+#import "SHWeexViewController.h"
+#import "SHWeexManager.h"
+#import "UIView+Recognize.h"
 // remote
-#import <AFNetworking/AFURLSessionManager.h>
 #import <WeexSDK/WeexSDK.h>
 #import <WeexSDK/WXSDKEngine.h>
 #import <WeexSDK/WXDebugTool.h>

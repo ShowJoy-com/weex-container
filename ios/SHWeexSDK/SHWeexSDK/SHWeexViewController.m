@@ -17,7 +17,7 @@
 @property (nonatomic, strong) NSMutableDictionary *mdicWeexViews;
 @property (nonatomic, strong) UIView * mviewCurrentWeex;
 @property (nonatomic, strong) NSMutableDictionary * mdicSentValue;
-@property (nonatomic, assign) BOOL   ISDebug;
+@property (nonatomic, assign) BOOL   ISRelease;
 @property (nonatomic, strong) UIViewController * currentViewController;
 @property (nonatomic, assign) CGFloat weexHeight;
 
@@ -38,10 +38,10 @@
     return self;
 }
 
--(void)SHloadWeexPageWithData:(NSDictionary *)data withDebug:(BOOL)ISDebug withController:(UIViewController *)controller{
+-(void)SHloadWeexPageWithData:(NSDictionary *)data withRelease:(BOOL)ISRelease withController:(UIViewController *)controller{
     self.weexHeight = [[UIScreen mainScreen] bounds].size.height-64;
     self.currentViewController=controller;
-    self.ISDebug=ISDebug;
+    self.ISRelease=ISRelease;
     self.mdicSentValue = [NSMutableDictionary dictionaryWithDictionary:data];
     self.mdicWeexViews=[NSMutableDictionary dictionary];
     [self initviewWeexBack];
@@ -51,6 +51,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.view.backgroundColor=[UIColor whiteColor];
+    [self custormNavagationBarStyle];
 }
 
 -(void)viewDidAppear:(BOOL)animated{
@@ -68,9 +69,9 @@
  初始化背景
  */
 -(void)initviewWeexBack{
-    self.mviewWeexBack = [[UIView alloc] initWithFrame:CGRectMake(0, 64, CGRectGetWidth(self.view.frame), CGRectGetHeight(self.view.frame))];
+    self.mviewWeexBack = [[UIView alloc] initWithFrame:CGRectMake(0, 0, CGRectGetWidth(self.view.frame), CGRectGetHeight(self.view.frame))];
     [self.view addSubview:self.mviewWeexBack];
-    if (_ISDebug==YES) {
+    if (_ISRelease==NO) {
         UIBarButtonItem *rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"刷新" style:UIBarButtonItemStylePlain target:self action:@selector(refreshWeexView)];
         UIBarButtonItem *leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"扫码" style:UIBarButtonItemStylePlain target:self action:@selector(QRCodeClick)];
         self.navigationItem.rightBarButtonItem = rightBarButtonItem;
@@ -78,6 +79,19 @@
         
     }
 }
+
+-(void)custormNavagationBarStyle{
+    
+    if ([self respondsToSelector:@selector(setEdgesForExtendedLayout:)]) {
+        self.edgesForExtendedLayout=UIRectEdgeNone;
+        self.extendedLayoutIncludesOpaqueBars=NO;
+        self.automaticallyAdjustsScrollViewInsets=NO;
+    }
+    self.navigationController.navigationBar.translucent = NO;
+    [self.navigationController.navigationBar setTitleTextAttributes:@{NSForegroundColorAttributeName : [UIColor blackColor],NSFontAttributeName : [UIFont systemFontOfSize:18]}];
+}
+
+
 #pragma mark - Methods -
 /**
  判断加载类型
@@ -91,16 +105,21 @@
         NSDictionary * mdicValue = [NSDictionary dictionaryWithDictionary:[marrWeexPages objectAtIndex:idx]];
         if ([[mdicValue objectForKey:@"page"] isEqualToString:[mdicValueSent objectForKey:@"page"]]) {
             NSString * mstrFileName = [NSString stringWithFormat:@"weex_%@.js",[mdicValue objectForKey:@"page"]];
-            // 检查本地是否存在该文件 存在加载本地文件 不存在加载远端连接
-            if ([SHFileProcessing SHCheckFileISThere:mstrFileName]) {
-                // 判断文件最后修改时间 防止被篡改
-                NSString * mstrLastTime = [NSString stringWithFormat:@"%@",[mdicValue objectForKey:@"modtime"]];
-                if ([mstrLastTime isEqualToString:[SHFileProcessing SHGetFileThelastModifyTime:[SHFileProcessing SHGetFilePathWithFileName:mstrFileName]]]) {
-                    weakSelf.mdicResult = [NSMutableDictionary dictionaryWithObjectsAndKeys:[SHFileProcessing SHGetFilePathWithFileName:mstrFileName],@"url",[mdicValue objectForKey:@"h5"],@"h5", nil];
-                }
+            if (self.ISRelease==NO) {
+                self.mdicResult = [NSMutableDictionary dictionaryWithObjectsAndKeys:[mdicValue objectForKey:@"url"],@"url",[mdicValue objectForKey:@"h5"],@"h5", nil];
             }else{
-                weakSelf.mdicResult = [NSMutableDictionary dictionaryWithObjectsAndKeys:[mdicValue objectForKey:@"url"],@"url",[mdicValue objectForKey:@"h5"],@"h5", nil];
+                // 检查本地是否存在该文件 存在加载本地文件 不存在加载远端连接
+                if ([SHFileProcessing SHCheckFileISThere:mstrFileName]) {
+                    // 判断文件最后修改时间 防止被篡改
+                    NSString * mstrLastTime = [NSString stringWithFormat:@"%@",[mdicValue objectForKey:@"modtime"]];
+                    if ([mstrLastTime isEqualToString:[SHFileProcessing SHGetFileThelastModifyTime:[SHFileProcessing SHGetFilePathWithFileName:mstrFileName]]]) {
+                        weakSelf.mdicResult = [NSMutableDictionary dictionaryWithObjectsAndKeys:[SHFileProcessing SHGetFilePathWithFileName:mstrFileName],@"url",[mdicValue objectForKey:@"h5"],@"h5", nil];
+                    }
+                }else{
+                    weakSelf.mdicResult = [NSMutableDictionary dictionaryWithObjectsAndKeys:[mdicValue objectForKey:@"url"],@"url",[mdicValue objectForKey:@"h5"],@"h5", nil];
+                }
             }
+           
         }
     }];
     return weakSelf.mdicResult;
@@ -116,8 +135,8 @@
     if (self.mviewCurrentWeex) {
         [self.mviewCurrentWeex removeFromSuperview];
     }
-    [self SHloadWeexPageWithData:self.mdicSentValue withDebug:self.ISDebug withController:self.currentViewController];
-    self.mviewWeexBack.frame = CGRectMake(0, 64, CGRectGetWidth(self.view.frame), CGRectGetHeight(self.view.frame));
+    [self SHloadWeexPageWithData:self.mdicSentValue withRelease:self.ISRelease withController:self.currentViewController];
+    self.mviewWeexBack.frame = CGRectMake(0, 0, CGRectGetWidth(self.view.frame), CGRectGetHeight(self.view.frame));
 }
 /**
  渲染weex页面

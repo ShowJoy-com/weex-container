@@ -4,11 +4,6 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>AFNetworking.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
 		<key>PINCache.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -29,11 +24,6 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>SHScanQrCode.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
 		<key>SocketRocket.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -42,11 +32,6 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>356E6DFB891317BD66967BBF298F321D</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
 		<key>7020FA468B15664DBD673D04AD8E5C33</key>
 		<dict>
 			<key>primary</key>
@@ -57,17 +42,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>9E033EDB5EC0819481B0546434FA577B</key>
+		<key>A6C943ADB88ACAACE8DDFF8493B15240</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>ABA6BFAA19F6816FF1FEADEAAE2A832D</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>CA7BD75F6C209C656A90A4E5BBE445C9</key>
+		<key>AD03CA9A10C296C91049CC4918F0E87B</key>
 		<dict>
 			<key>primary</key>
 			<true/>
